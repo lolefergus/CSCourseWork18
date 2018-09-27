@@ -29,7 +29,7 @@
                 $image = $row['image'];
 
                 // limmits body text displayed
-                $cutbody = substr($body,0,300);
+                $cutBody = substr($body,0,300);
 
                 echo'
                 <div class="card col-4">
@@ -37,7 +37,7 @@
                   <img class="card-img-top rounded-top" src="/images/'.$image.'" alt="Card image cap" name="image" style="padding-top: 15px;">
                   <div class="card-body">
                     <h5 class="card-title" name="title">'.$title.'</h5>
-                    <p class="card-text" name="body" style="min-height:220px;">'.$cutbody.'...</p>
+                    <p class="card-text" name="body" style="min-height:220px;">'.$cutBody.'...</p>
                     <a href="/news/view/index.php/?id='.$id.'" class="btn btn-primary">Click to continue reading</a>
                   </div>
                 </div>
