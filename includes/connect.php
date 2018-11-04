@@ -7,9 +7,9 @@ $username = "fergusLole";
 $password = "m1Cr020ft";
 $dbname = "CompSciCourseWork2018";
 
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+$conn = mysqli_connect($servername, $username, $password, $dbname, 1433);
 if (!$conn)
 {
-  die("Connection failed: " . mysqli_connect_error());
+  die("Connection failed: " . mysqli_connect_error() . " And: " . mysqli_connect_errno());
 }
 ?>
