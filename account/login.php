@@ -16,7 +16,7 @@
           <!-- Latest news -->
           <section class="container " style="padding-top: 20px; padding-bottom: 20px;">
             <div>
-              <h3>Latest News</h3>
+              <h3>Sign In</h3>
             </div>
             <div class="row card-group">
               <?php
@@ -27,7 +27,6 @@
                 $title = $row['title'];
                 $body = $row['body'];
                 $image = $row['image'];
-
 
                 // limmits body text displayed
                 $cutBody = substr($body,0,300);

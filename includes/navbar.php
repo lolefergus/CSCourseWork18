@@ -31,20 +31,28 @@
 
           <!-- Navbar links -->
           <ul class="navbar-nav">
-            <li class="nav-item dropdown megamenu">
+            <li class="nav-item">
               <a class="nav-link" href="/index.php">
                 Home
               </a>
             </li>
-            <li class="nav-item dropdown megamenu">
+            <li class="nav-item">
               <a class="nav-link" href="/news/index.php">
                 News
               </a>
             </li>
-            <li class="nav-item dropdown megamenu">
+            <li class="nav-item">
               <a class="nav-link" href="/gallery/index.php">
                 Gallery
               </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="/account/login.php" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown07">
+                <a class="dropdown-item" href="/signIn.php">Login</a>
+                <a class="dropdown-item" href="#">Sign Up</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
             </li>
           </ul>
         </div>
