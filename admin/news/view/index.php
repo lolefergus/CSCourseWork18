@@ -3,6 +3,7 @@
 <?php
 $root = $_SERVER['DOCUMENT_ROOT'];
 $title = "N - Templates - Headers";
+include($root.'/includes/session.php')
 include($root.'/includes/head.php');
 include($root.'/includes/connect.php');
 ?>
@@ -19,7 +20,7 @@ include($root.'/includes/connect.php');
       echo '<script>window.location.href="/admin/news/index.php";</script>';
     }
 
-    
+
 
     $id = $_GET['id'];
     $Qury = mysqli_query($conn,"SELECT * FROM news WHERE id = $id");
