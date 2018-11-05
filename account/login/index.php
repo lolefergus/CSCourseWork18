@@ -13,51 +13,57 @@
         include($root.'/includes/navbar.php');
         ?>
 
-          <!-- Latest news -->
-          <section class="container " style="padding-top: 20px; padding-bottom: 20px;">
-            <div>
-              <h3>Sign In</h3>
-            </div>
-            <div class="row card-group">
-              <?php
-              $Qury = mysqli_query($conn,"SELECT * FROM news LIMIT 3");
-              while ($row = mysqli_fetch_assoc($Qury))
-              {
-                $id = $row['id'];
-                $title = $row['title'];
-                $body = $row['body'];
-                $image = $row['image'];
+          <container>
 
-                // limmits body text displayed
-                $cutBody = substr($body,0,300);
+            <section class="slice sct-color-1">
+                        <div class="container container-lg">
+                            <div class="row align-items-center cols-xs-space cols-sm-space cols-md-space">
+                                <div class="col-lg-6">
+                                    <form class="form-default form-material">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="form-group has-floating-label">
+                                                    <label class="control-label">Email</label>
+                                                    <input type="text" class="form-control form-control-lg" placeholder="">
+                                                    <span class="bar"></span>
+                                                </div>
+                                            </div>
+                                        </div>
 
-                echo'
-                <div class="card col-4">
-                  <input type="hidden" name="id" value="'.$id.'">
-                  <img class="card-img-top rounded-top" src="/images/'.$image.'" alt="Card image cap" name="image" style="padding-top: 15px;">
-                  <div class="card-body">
-                    <h5 class="card-title" name="title">'.$title.'</h5>
-                    <p class="card-text" name="body" style="min-height:220px;">'.$cutBody.'...</p>
-                    <a href="/news/view/index.php/?id='.$id.'" class="btn btn-primary">Click to continue reading</a>
-                  </div>
-                </div>
-                ';
-              }
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="form-group has-floating-label">
+                                                    <label class="control-label">Password</label>
+                                                    <input type="password" class="form-control form-control-lg" placeholder="">
+                                                    <span class="bar"></span>
+                                                </div>
+                                            </div>
+                                        </div>
 
-              ?>
-            </div>
-            <div class="row justify-content-center">
-              <div class="col-8 my-3">
-                <div class="row py-5">
-                  <div class="col-12">
-                    <a href="/news/index.php" class="btn btn-primary">Click to see all Articles</a>
-                    <span class="clearfix"></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+                                        <div class="row cols-xs-space cols-sm-space cols-md-space align-items-center text-left">
 
+                                          <div class="col-lg-3 col-md-4">
+                                            <div class="mt-4">
+                                              <button type="submit" class="btn btn-styled btn-base-1 btn-circle">
+                                                Login
+                                              </button>
+                                            </div>
+                                          </div>
+
+                                          <div class="col-md-6 ml-lg-auto">
+                                            <div class="mt-4">
+                                              <a href ="/account/create/">Don't have an account? Create one here.</a>
+                                            </div>
+                                          </div>
+
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+          </container>
 
          <?php
          include($root.'/includes/footer.php');
