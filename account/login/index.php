@@ -20,6 +20,11 @@
                             <div class="row align-items-center cols-xs-space cols-sm-space cols-md-space">
                                 <div class="col-lg-6">
                                     <form class="form-default form-material">
+
+                                      <div class="row col-12">
+                                        <h3>Login</h3>
+                                      </div>
+
                                         <div class="row">
                                             <div class="col-12">
                                                 <div class="form-group has-floating-label">
