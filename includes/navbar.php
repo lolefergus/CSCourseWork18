@@ -17,20 +17,23 @@
         </div>
 
         <div class="collapse navbar-collapse align-items-center justify-content-end" name="navbar_main">
-          <!-- Navbar search - For small resolutions -->
-          <div class="navbar-search-widget b-xs-bottom py-3 d-lg-none d-none">
-            <form class="" role="form">
-              <div class="input-group input-group-lg">
-                <input type="text" class="form-control" placeholder="Search for...">
-                <span class="input-group-btn">
-                  <button class="btn btn-base-3" type="button">Go!</button>
-                </span>
-              </div>
-            </form>
-          </div>
+
 
           <!-- Navbar links -->
-          <ul class="navbar-nav">
+
+          <div class="dropdown">
+            <button class="btn btn-base-1 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown button
+            </button>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 34px, 0px); top: 0px; left: 0px; will-change: transform;">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+
+          <ul class="navbar-nav mr-auto">
             <li class="nav-item">
               <a class="nav-link" href="/index.php">
                 Home
@@ -47,7 +50,7 @@
               </a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="/account/login/" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
+              <a class="nav-link dropdown-toggle" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
               <div class="dropdown-menu" aria-labelledby="dropdown07">
                 <a class="dropdown-item" href="/account/login/">Login</a>
                 <a class="dropdown-item" href="#">Sign Up</a>

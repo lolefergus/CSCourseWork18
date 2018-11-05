@@ -7,6 +7,10 @@
 
     <title>Career Ready</title>
 
+    <?php
+    include($root.'/include/scripts.php');
+    ?>
+
     <!-- Bootstrap -->
     <link type="text/css" href="/assets/css/boomerang.min.css" rel="stylesheet" media="screen">
 
