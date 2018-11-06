@@ -16,22 +16,12 @@
           </button>
         </div>
 
-        <div class="collapse navbar-collapse align-items-center justify-content-end" name="navbar_main">
+        <div class="collapse navbar-collapse  justify-content-end" name="navbar_main">
 
 
           <!-- Navbar links -->
 
-          <div class="dropdown">
-            <button class="btn btn-base-1 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown button
-            </button>
 
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 34px, 0px); top: 0px; left: 0px; will-change: transform;">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </div>
 
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">

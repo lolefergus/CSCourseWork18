@@ -13,6 +13,12 @@ include($root.'/includes/connect.php');
     include($root.'/includes/navbar.php');
     ?>
 
+
+    <?php
+    $accountType = $_GET['type'];
+
+    ?>
+
     <container>
 
       <section class="slice sct-color-1">
