@@ -5,7 +5,7 @@
 // $servername = "compscicoursework.database.windows.net";
 // $username = "fergusLole@compscicoursework";
 $password = "m1Cr020ft";
-// $dbname = "CompSciCourseWork2018";
+// $dbname = "CompSciCourseWork2019";
 //
 // $conn = mysqli_connect($servername, $username, $password, $dbname, 1433);
 // if (!$conn)
@@ -15,7 +15,7 @@ $password = "m1Cr020ft";
 
 // PHP Data Objects(PDO) Sample Code:
 try {
-    $conn = new PDO("sqlsrv:server = tcp:compscicoursework.database.windows.net,1433; Database = CompSciCourseWork2018", "fergusLole", $password);
+    $conn = new PDO("sqlsrv:server = tcp:compscicoursework.database.windows.net,1433; Database = CompSciCourseWork2019", "ferguslole", $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch (PDOException $e) {
@@ -24,8 +24,11 @@ catch (PDOException $e) {
 }
 
 // SQL Server Extension Sample Code:
-$connectionInfo = array("UID" => "fergusLole@compscicoursework", "pwd" => $password, "Database" => "CompSciCourseWork2018", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+$connectionInfo = array("UID" => "ferguslole@compscicoursework", "pwd" => $password, "Database" => "CompSciCourseWork2019", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:compscicoursework.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
+
+print "he";
+print sqlsrv_server_info ( $conn );
 
 ?>
