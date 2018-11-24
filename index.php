@@ -21,7 +21,7 @@
             <div class="row card-group">
               <?php
               $Qury = mysqli_query($conn,"SELECT * FROM news LIMIT 3");
-              while ($row = mysqli_fetch_assoc($Qury))
+              while ($row = sqlvr_fetch_array($Qury))
               {
                 $id = $row['id'];
                 $title = $row['title'];
