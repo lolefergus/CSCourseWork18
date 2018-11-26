@@ -20,7 +20,7 @@
             </div>
             <div class="row card-group">
               <?php
-              $Qury = mysqli_query($conn,"SELECT * FROM news LIMIT 3");
+              $Qury = sqlvr_query($conn,"SELECT * FROM news LIMIT 3");
               while ($row = sqlvr_fetch_array($Qury))
               {
                 $id = $row['id'];
