@@ -13,8 +13,8 @@ include($root.'/includes/connect.php');
     include($root.'/includes/navbar.php');
 
     $id = $_GET['id'];
-    $Qury = sqlvr_query($conn,"SELECT * FROM news WHERE id = $id");
-    while ($row = sqlsrv_execute($Qury))
+    $Qury = mysqli_query($conn,"SELECT * FROM news WHERE id = $id");
+    while ($row = mysqli_fetch_assoc($Qury))
     {
       $title = $row['title'];
       $body = $row['body'];
