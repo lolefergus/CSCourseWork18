@@ -39,8 +39,8 @@ include($root.'/includes/connect.php');
 
           <?php
 
-          $Qury = sqlvr_query($conn,"SELECT * FROM news");
-          while ($row = sqlvr_fetch_array($Qury))
+          $Qury = mysqli_query($conn,"SELECT * FROM news");
+          while ($row = mysqli_fetch_assoc($Qury))
           {
             $id = $row['id'];
             $title = $row['title'];
