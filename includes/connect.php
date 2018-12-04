@@ -29,6 +29,6 @@ $connectionInfo = array("UID" => "ferguslole@compscicoursework", "pwd" => $passw
 $serverName = "tcp:compscicoursework.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
-Console.print "Conection info: " $conn;
+Console.print $conn;
 
 ?>
