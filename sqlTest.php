@@ -6,9 +6,14 @@
   <header>SQL Output:</header>
 <?php
 
-
-print sqlsrv_query ($conn, "Select * from users;");
-
+try
+{
+  print sqlsrv_query ($conn, "Select * from users;");
+}
+catch
+{
+  print "SQL Error";
+}
 
 ?>
 </body>
