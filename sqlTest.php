@@ -3,6 +3,7 @@
 </head>
 
 <body>
+  <header>SQL Output:</header>
 <?php
 
 
