@@ -4,7 +4,7 @@
 </head>
 
 <body>
-  <p>SQL Output:</p>
+  <header>SQL Output:</header>
   <?php
 
   //SQL Query
