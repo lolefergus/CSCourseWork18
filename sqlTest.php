@@ -1,4 +1,10 @@
 <html>
+<?php
+$root = $_SERVER['DOCUMENT_ROOT'];
+$title = "N - Templates - Headers";
+include($root.'/includes/head.php');
+include($root.'/includes/connect.php');
+?>
   <head>
     <title>SQL Statment Test</title>
   </head>
