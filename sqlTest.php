@@ -1,5 +1,5 @@
 <head>
-  <tile>SQL Statment Test</title>
+  <title>SQL Statment Test</title>
 </head>
 
 <body>
