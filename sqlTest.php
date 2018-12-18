@@ -8,7 +8,7 @@
     <?php
 
     //SQL Query
-    $Query = sqlsrv_query ($conn, "Select * from accounts;");
+    $Query = sqlsrv_query ($conn, "SELECT * FROM accounts;");
 
     //If fails
     // if ($Query == false)
