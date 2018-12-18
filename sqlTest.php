@@ -8,7 +8,7 @@
 
 try
 {
-  print sqlsrv_query ($conn, "Select * from users;");
+  print sqlsrv_query ($conn, "Select * from accounts;");
 }
 catch
 {
