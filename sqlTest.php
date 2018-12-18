@@ -10,9 +10,9 @@ try
 {
   print sqlsrv_query ($conn, "Select * from accounts;");
 }
-catch
+catch (SQLExeption)
 {
-  print "SQL Error";
+  print "SQL Error: ", sqlsrv_errors (SQLSRV_ERR_ALL);
 }
 
 ?>
