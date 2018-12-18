@@ -14,7 +14,7 @@ include($root.'/includes/connect.php');
     <?php
 
     //SQL Query
-    $Query = sqlsrv_query ($conn, "SELECT * FROM accounts");
+    $Query = sqlsrv_query ($conn, "SELECT * FROM accounts Where id = 1");
 
     //If fails
     // if ($Query == false)
