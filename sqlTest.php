@@ -10,7 +10,7 @@
   $Query = sqlsrv_query ($conn, "Select * from accounts;");
 
   //If fails
-  if ($Query = false)
+  if ($Query == false)
   {
     //displays error message
     print "SQL Error: ", sqlsrv_errors (SQLSRV_ERR_ALL);
