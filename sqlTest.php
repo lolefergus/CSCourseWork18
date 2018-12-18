@@ -1,9 +1,10 @@
+<html>
 <head>
   <title>SQL Statment Test</title>
 </head>
 
 <body>
-  <header>SQL Output:</header>
+  <p>SQL Output:</p>
   <?php
 
   //SQL Query
@@ -24,3 +25,4 @@
 
   ?>
 </body>
+</html>
