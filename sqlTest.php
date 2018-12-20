@@ -15,6 +15,8 @@ include($root.'/includes/connect.php');
 
     //SQL Query
     $Query = sqlsrv_query ($conn, "SELECT * FROM accounts Where id = 1");
+    $row = sqlsrv_fetch_array ($Query);
+    var_dump($row);
 
     //If fails
     // if ($Query == false)
@@ -28,7 +30,7 @@ include($root.'/includes/connect.php');
     //   print $Query;
     // }
 
-    print $Query;
+    // print $Query;
     ?>
   </body>
 </html>
