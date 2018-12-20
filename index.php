@@ -48,7 +48,8 @@
               }
               }
               else {
-                print ("Error with Query");
+                print ("Error with Query:");
+                print (sqlsrv_errors (SQLSRV_ERR_ALL));
               }
 
               ?>
