@@ -41,8 +41,8 @@ include($root.'/includes/connect.php');
 
             <?php
 
-            $Query = mysqli_query($conn,"SELECT * FROM news");
-            while ($row = mysqli_fetch_assoc($Query))
+            $Query = sqlsrv_query($conn,"SELECT * FROM news");
+            while ($row = sqlsrv_fetch_array($Query))
             {
               $id = $row['id'];
               $title = $row['title'];
