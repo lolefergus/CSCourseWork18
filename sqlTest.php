@@ -14,11 +14,11 @@ include($root.'/includes/connect.php');
     <?php
 
     //SQL Query
-    $Query = sqlsrv_query ($conn, "SELECT * FROM accounts");
+    $Qury = sqlsrv_query ($conn, "SELECT * FROM accounts");
     // $row = sqlsrv_fetch_array ($Query);
     // var_dump($row);
 
-    while($row = sqlsrv_fetch_array($Query)){
+    while($row = sqlsrv_fetch_array($Qury)){
       print($row["email"]);
     }
 
