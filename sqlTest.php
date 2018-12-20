@@ -15,8 +15,12 @@ include($root.'/includes/connect.php');
 
     //SQL Query
     $Query = sqlsrv_query ($conn, "SELECT * FROM accounts Where id = 1");
-    $row = sqlsrv_fetch_array ($Query);
-    var_dump($row);
+    // $row = sqlsrv_fetch_array ($Query);
+    // var_dump($row);
+
+    while($row = sqlsrv_fetch($Query)){
+      print($row["email"]);
+    }
 
     //If fails
     // if ($Query == false)
