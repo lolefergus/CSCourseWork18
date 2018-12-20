@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title><?php $title ?> - Career Ready</title>
+    <title><?php print $title; ?> - Career Ready</title>
 
     <?php
     include($root.'/include/scripts.php');
