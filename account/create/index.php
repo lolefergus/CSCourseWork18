@@ -12,7 +12,6 @@ include($root.'/includes/connect.php');
     <?php
     include($root.'/includes/navbar.php');
 
-    $accountType = $row['selectpicker value'];
 
     echo'
     <container>
