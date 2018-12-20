@@ -20,7 +20,7 @@
             </div>
             <div class="row card-group">
               <?php
-              $Query = sqlsrv_query($conn, "SELECT * FROM news LIMIT 3");
+              $Query = sqlsrv_query($conn, "SELECT TOP (3) * FROM news");
               if ($Query)
               {
                 while ($row = sqlsrv_fetch_array($Query))
