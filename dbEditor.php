@@ -11,8 +11,8 @@
     <td>
       <h3>All Entries</h3>
       <?php  //allows php code in section
-      $Qury = mysqli_query($conn,"select * from news");
-      while($row = mysqli_fetch_assoc($Qury))
+      $Query = mysqli_query($conn,"select * from news");
+      while($row = mysqli_fetch_assoc($Query))
       {
         echo '
         <form action="" method="post">

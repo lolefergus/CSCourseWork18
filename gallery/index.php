@@ -39,8 +39,8 @@ include($root.'/includes/connect.php');
 
           <?php
 
-          $Qury = mysqli_query($conn,"SELECT * FROM news");
-          while ($row = mysqli_fetch_assoc($Qury))
+          $Query = mysqli_query($conn,"SELECT * FROM news");
+          while ($row = mysqli_fetch_assoc($Query))
           {
             $id = $row['id'];
             $title = $row['title'];

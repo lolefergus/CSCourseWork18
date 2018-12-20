@@ -23,8 +23,8 @@ include($root.'/includes/connect.php');
 
 
     $id = $_GET['id'];
-    $Qury = mysqli_query($conn,"SELECT * FROM news WHERE id = $id");
-    while ($row = mysqli_fetch_assoc($Qury))
+    $Query = mysqli_query($conn,"SELECT * FROM news WHERE id = $id");
+    while ($row = mysqli_fetch_assoc($Query))
     {
       $title = $row['title'];
       $body = $row['body'];
