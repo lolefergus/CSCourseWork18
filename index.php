@@ -21,8 +21,10 @@
             <div class="row card-group">
               <?php
               $Qury = sqlsrv_query($conn, "SELECT * FROM news LIMIT 3");
-              while ($row = sqlsrv_fetch_array($Qury))
+              if ($Qury)
               {
+                while ($row = sqlsrv_fetch_array($Qury))
+                {
                 $id = $row['id'];
                 $title = $row['title'];
                 $body = $row['body'];
@@ -43,6 +45,10 @@
                   </div>
                 </div>
                 ';
+              }
+              }
+              else {
+                print ("Error with Qury");
               }
 
               ?>
