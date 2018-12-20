@@ -16,7 +16,7 @@
         if (isset($_POST['delete']))
         {
           $id = $_POST['id'];//passes value from HTML input box
-          mysqli_query($conn, "DELETE FROM news WHERE id = '$id'");
+          sqlsrv_query($conn, "DELETE FROM news WHERE id = '$id'");
           echo '<script>window.location.href="/admin/news/index.php";</script>';
         }
         ?>
@@ -48,8 +48,8 @@
 
                 <?php
 
-                $Query = mysqli_query($conn,"SELECT * FROM news");
-                while ($row = mysqli_fetch_assoc($Query))
+                $Query = sqlsrv_query($conn,"SELECT * FROM news");
+                while ($row = sqlsrv_fetch_array($Query))
                 {
                   $id = $row['id'];
                   $title = $row['title'];

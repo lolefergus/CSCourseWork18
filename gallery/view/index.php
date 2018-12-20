@@ -13,8 +13,8 @@ include($root.'/includes/connect.php');
     include($root.'/includes/navbar.php');
 
     $id = $_GET['id'];
-    $Query = mysqli_query($conn,"SELECT * FROM news WHERE id = $id");
-    while ($row = mysqli_fetch_assoc($Query))
+    $Query = sqlsrv_query($conn,"SELECT * FROM news WHERE id = $id");
+    while ($row = sqlsrv_fetch_array($Query))
     {
       $title = $row['title'];
       $image = $row['image'];
