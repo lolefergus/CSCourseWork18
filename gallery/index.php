@@ -2,7 +2,7 @@
 <html>
 <?php
 $root = $_SERVER['DOCUMENT_ROOT'];
-$title = "N - Templates - Headers";
+$title = "Gallery";
 include($root.'/includes/head.php');
 include($root.'/includes/connect.php');
 

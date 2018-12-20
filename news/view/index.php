@@ -2,7 +2,12 @@
 <html>
 <?php
 $root = $_SERVER['DOCUMENT_ROOT'];
-$title = "N - Templates - Headers";
+
+//sources title
+$id = $_GET['id'];
+$Query = sqlsrv_query($conn,"SELECT * FROM news WHERE id = $id");
+$title = $_Get['title'];
+
 include($root.'/includes/head.php');
 include($root.'/includes/connect.php');
 ?>
@@ -12,8 +17,6 @@ include($root.'/includes/connect.php');
     <?php
     include($root.'/includes/navbar.php');
 
-    $id = $_GET['id'];
-    $Query = sqlsrv_query($conn,"SELECT * FROM news WHERE id = $id");
     while ($row = sqlsrv_fetch_array($Query))
     {
       $title = $row['title'];
