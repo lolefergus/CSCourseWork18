@@ -70,6 +70,12 @@ include($root.'/includes/connect.php');
                 </div>
 
                 <div class="form-group">
+                  <?php if ($accountType == "Student") { //changes question for student or mentor
+                    echo '<label>Select the Region of the Island you live in:</label>';
+                  }
+                  else {
+                    echo '<label>Select the Region of the Island you work in:</label>';
+                  } ?>
                   <label>Select the Region of the Island you live in:</label>
                   <select class="form-control selectpicker select2-hidden-accessible" data-minimum-results-for-search="Infinity" tabindex="-1" aria-hidden="true">
                     <option value="North">North</option>
