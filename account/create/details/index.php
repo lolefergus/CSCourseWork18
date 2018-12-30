@@ -92,7 +92,6 @@ include($root.'/includes/connect.php');
                       else {
                         echo '<label class="control-label">Enter the Name of the Company You Work For</label>';
                       } ?>
-                      <label class="control-label">Password</label>
                       <input type="password" class="form-control form-control-lg" placeholder="">
                       <span class="bar"></span>
                     </div>
