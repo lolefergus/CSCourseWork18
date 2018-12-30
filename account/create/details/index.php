@@ -17,6 +17,20 @@ include($root.'/includes/connect.php');
     <?php
     $accountType = $_GET['type'];
 
+    if (isset($_POST['create']))
+    {
+      $firstName = $_POST['firstName'];
+      $lastName = $_POST['lastName'];
+      $email = $_POST['email'];//passes value from HTML input box
+      $password = password_hash ( $_POST['password'], PASSWORD_BCRYPT); //hashes password
+      $region = $_POST['region'];
+      $workOrSchool = $_POST['workOrSchool'];
+      $joinYear = (string)date("Y");
+
+      sqlsrv_query($conn, "INSERT INTO accounts (firstName, lastName, password, email, accountType, joinYear, region, workOrSchool) values ($firstName, $lastName, $password, $email, $accountType, $joinYear, $region, $workOrSchool) ");
+      echo '<script>window.location.href="/admin/news/index.php";</script>';
+    }
+
     ?>
 
     <container>
@@ -115,7 +129,7 @@ include($root.'/includes/connect.php');
 
                   <div class="col-lg-3 col-md-4">
                     <div class="mt-4">
-                      <button type="submit" class="btn btn-styled btn-base-1 btn-circle">
+                      <button type="submit" class="btn btn-styled btn-base-1 btn-circle" name="create">
                         Create
                       </button>
                     </div>
