@@ -88,12 +88,12 @@ include($root.'/includes/connect.php');
                   <div class="form-group">
                     <label class="control-label">Enter the Name of the School You Attend</label>
                     <select class="form-control selectpicker select2-hidden-accessible" data-minimum-results-for-search="Infinity" tabindex="-1" aria-hidden="true">
-                      <option value="Ramsey Grammar School">RGS</option>
-                      <option value="Castle Rushen High School">CRHS</option>
-                      <option value="Queen Elizabeth II High School">QEII</option>
-                      <option value="Ballakermeen High School">BHS</option>
-                      <option value="St Ninians High School">SNHS</option>
-                      <option value="University College Isle of Man">UCM</option>
+                      <option value="RGS">Ramsey Grammar School</option>
+                      <option value="CRHS">Castle Rushen High School</option>
+                      <option value="QEII">Queen Elizabeth II High School</option>
+                      <option value="BHS">Ballakermeen High School</option>
+                      <option value="SNHS">St Ninians High School</option>
+                      <option value="UCM">University College Isle of Man</option>
                     </select>
                   </div>';
                 }
