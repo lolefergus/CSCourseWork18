@@ -76,7 +76,6 @@ include($root.'/includes/connect.php');
                   else {
                     echo '<label>Select the Region of the Island you work in:</label>';
                   } ?>
-                  <label>Select the Region of the Island you live in:</label>
                   <select class="form-control selectpicker select2-hidden-accessible" data-minimum-results-for-search="Infinity" tabindex="-1" aria-hidden="true">
                     <option value="North">North</option>
                     <option value="Center">Center</option>
