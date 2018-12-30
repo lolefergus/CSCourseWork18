@@ -78,7 +78,7 @@ include($root.'/includes/connect.php');
                   } ?>
                   <select class="form-control selectpicker select2-hidden-accessible" data-minimum-results-for-search="Infinity" tabindex="-1" aria-hidden="true">
                     <option value="North">North</option>
-                    <option value="Center">Center</option>
+                    <option value="Center">Centre</option>
                     <option value="South">South</option>
                   </select>
                 </div>
