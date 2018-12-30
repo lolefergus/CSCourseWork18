@@ -83,20 +83,33 @@ include($root.'/includes/connect.php');
                   </select>
                 </div>
 
-                <div class="row">
-                  <div class="col-12">
-                    <div class="form-group has-floating-label">
-                      <?php if ($accountType == "Student") { //changes question for student or mentor
-                        echo '<label class="control-label">Enter the Name of the School You Attend</label>';
-                      }
-                      else {
-                        echo '<label class="control-label">Enter the Name of the Company You Work For</label>';
-                      } ?>
-                      <input type="password" class="form-control form-control-lg" placeholder="">
-                      <span class="bar"></span>
+                <?php if ($accountType == "Student") { //changes question for student or mentor
+                  echo '
+                  <div class="form-group">
+                    <label class="control-label">Enter the Name of the School You Attend</label>
+                    <select class="form-control selectpicker select2-hidden-accessible" data-minimum-results-for-search="Infinity" tabindex="-1" aria-hidden="true">
+                      <option value="Ramsey Grammar School">RGS</option>
+                      <option value="Castle Rushen High School">CRHS</option>
+                      <option value="Queen Elizabeth II High School">QEII</option>
+                      <option value="Ballakermeen High School">BHS</option>
+                      <option value="St Ninians High School">SNHS</option>
+                      <option value="University College Isle of Man">UCM</option>
+                    </select>
+                  </div>';
+                }
+                else {
+                  echo '
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="form-group has-floating-label">
+                        <label class="control-label">Enter the Name of the Company You Work For</label>
+                        <input type="password" class="form-control form-control-lg" placeholder="">
+                        <span class="bar"></span>
+                      </div>
                     </div>
-                  </div>
-                </div>
+                  </div>';
+                } ?>
+
 
                 <div class="row cols-xs-space cols-sm-space cols-md-space align-items-center text-left">
 
