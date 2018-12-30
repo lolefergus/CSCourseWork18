@@ -71,16 +71,32 @@ include($root.'/includes/connect.php');
 
                 <div class="form-group">
                   <?php if ($accountType == "Student") { //changes question for student or mentor
-                    echo '<label>Select the Region of the Island you live in:</label>';
+                    echo '<label>Select the Region of the Island You Live In:</label>';
                   }
                   else {
-                    echo '<label>Select the Region of the Island you work in:</label>';
+                    echo '<label>Select the Region of the Island You Work In:</label>';
                   } ?>
                   <select class="form-control selectpicker select2-hidden-accessible" data-minimum-results-for-search="Infinity" tabindex="-1" aria-hidden="true">
                     <option value="North">North</option>
                     <option value="Center">Centre</option>
                     <option value="South">South</option>
                   </select>
+                </div>
+
+                <div class="row">
+                  <div class="col-12">
+                    <div class="form-group has-floating-label">
+                      <?php if ($accountType == "Student") { //changes question for student or mentor
+                        echo '<label class="control-label">Enter the Name of the School You Attend</label>';
+                      }
+                      else {
+                        echo '<label class="control-label">Enter the Name of the Company You Work For</label>';
+                      } ?>
+                      <label class="control-label">Password</label>
+                      <input type="password" class="form-control form-control-lg" placeholder="">
+                      <span class="bar"></span>
+                    </div>
+                  </div>
                 </div>
 
                 <div class="row cols-xs-space cols-sm-space cols-md-space align-items-center text-left">
