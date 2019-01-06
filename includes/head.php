@@ -16,15 +16,7 @@
 
     <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css" type="text/css">
 
-    <!-- <link rel="stylesheet" href="/assets/css/boomerang-startup-agency-dark.min.css" type="text/css"> -->
     <link rel="stylesheet" href="/assets/css/boomerang-startup-agency.min.css" type="text/css">
-    <!-- <link rel="stylesheet" href="/assets/css/boomerang-startup-analitycs-dark.min.css" type="text/css"> -->
-    <!-- <link rel="stylesheet" href="/assets/css/boomerang-startup-analitycs.min.css" type="text/css"> -->
-    <!-- <link rel="stylesheet" href="/assets/css/boomerang-startup-app-dark.min.css" type="text/css"> -->
-    <!-- <link rel="stylesheet" href="/assets/css/boomerang-startup-app.min.css" type="text/css"> -->
-    <!-- <link rel="stylesheet" href="/assets/css/boomerang-startup-classic-dark.min.css" type="text/css"> -->
-    <!-- <link rel="stylesheet" href="/assets/css/boomerang-startup-classic.min.css" type="text/css"> -->
-    <!-- <link rel="stylesheet" href="/assets/css/boomerang-startup-app-dark.min.css" type="text/css"> -->
 
 
     <!-- Fonts -->
