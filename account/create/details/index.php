@@ -2,7 +2,7 @@
 <html>
 <?php
 $root = $_SERVER['DOCUMENT_ROOT'];
-$title = "Create Account";
+$title = "Register Account";
 include($root.'/includes/head.php');
 include($root.'/includes/connect.php');
 ?>
@@ -42,7 +42,7 @@ include($root.'/includes/connect.php');
               <form class="form-default form-material">
 
                 <div class="row col-12">
-                  <h3>Sign Up</h3>
+                  <h3>Register for the Program</h3>
                 </div>
 
                 <div class="row">
