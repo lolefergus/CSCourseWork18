@@ -49,7 +49,7 @@
 
                       <div class="col-lg-3 col-md-4">
                         <div class="mt-4">
-                          <button type="submit" class="btn btn-styled btn-base-1 btn-circle">
+                          <button type="button" class="btn btn-styled btn-base-1 btn-circle">
                             Login
                           </button>
                         </div>
