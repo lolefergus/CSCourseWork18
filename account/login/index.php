@@ -39,6 +39,7 @@
             $message = 'There was an error with your details.';
           }
       }
+      print'email invalid';
     }
 
 ?>
