@@ -24,7 +24,7 @@ include($root.'/includes/connect.php');
 
 
     //sets values from info entered on page
-    $email = 'demoemail@uw.cy';
+    $email = 'ferguslole@online.sch.im';
       if (preg_match('#([A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,})#i', $email)=== 1) {
       print'email match';//REMOVE
       $password = 'pword';
