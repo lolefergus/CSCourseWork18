@@ -45,7 +45,7 @@ include($root.'/includes/connect.php');
             //Start a session
             session_start();
             //Use user's id to identify the session
-            $_SESSION['id']=$id;
+            $_SESSION['id']= $id;
             $_SESSION['last_activity'] = time(); //your last activity was now, having logged in.
             //sends user to account homepage
             // header('location: /account/'); UNCOMENT AFTER DEBUGGING
