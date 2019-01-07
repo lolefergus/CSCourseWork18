@@ -10,14 +10,6 @@
             <p class="mt-3">
               All the components included in Boomerang are built to the same level of quality as Bootstrap and highlighted with several example pages.
             </p>
-
-            <div class="copyright mt-4">
-              <p>
-              Copyright © 2018                                <a href="https://webpixels.io" target="_blank">
-              <strong>Webpixels</strong>
-            </a> -
-            All rights reserved
-          </p>
         </div>
       </div>
     </div>
