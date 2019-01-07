@@ -25,7 +25,7 @@ include($root.'/includes/connect.php');
 
     //sets values from info entered on page
     $email = $_REQUEST[$_POST['email']];
-    if (preg_match('\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b#i', $email)=== 1) {
+    if (preg_match('#\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b#i', $email)=== 1) {
       print'email match';//remove after tesing
       $password = $_REQUEST[$_POST['password']];
         print$password;//REMOVE
