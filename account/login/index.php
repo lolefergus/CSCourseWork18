@@ -9,6 +9,7 @@
     if(isset($_POST['login'])){
         //sets values from info entered on page
         $email = $_REQUEST[$_POST['email']];
+        if (preg_match('\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b#i', $email)=== 1) {
         $password = $_REQUEST[$_POST['password']];
         //searches for matching users
         $search = sqlsrv_query($conn, "SELECT * FROM accounts WHERE email='$email'");
@@ -29,12 +30,13 @@
                     //sends user to account homepage
                     header('location: /account/');
                 } else {
-                    $message = '<p>There was an error with your details.</p>';
+                    $message = 'There was an error with your details.';
                 }
             }
         } else {
-            Echo '<p>There was an error with your details.</p>';
+            $message = 'There was an error with your details.';
         }
+      }
     }
 
 ?>
