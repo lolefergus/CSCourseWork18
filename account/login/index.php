@@ -30,7 +30,7 @@
               $_SESSION['id']=$id;
               $_SESSION['last_activity'] = time(); //your last activity was now, having logged in.
               //sends user to account homepage
-              // header('location: /account/');
+              // header('location: /account/'); UNCOMENT AFTER DEBUGGING
               } else {
                 $message = 'There was an error with your details.';
               }
