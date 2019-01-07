@@ -30,13 +30,13 @@ include($root.'/includes/connect.php');
       $password = 'pword';
       //searches for matching users
       $search = sqlsrv_query($conn, "SELECT * FROM accounts WHERE email='$email'");
-      print $search; //REMOVE
       //Check num result found, then if only one
       $count = sqlsrv_num_rows($search);
       if(1 == $count){
         print 'found match'; //REMOVE
         //gets hashed password from DB
         while($row = sqlsrv_fetch_array($search)){
+          print $row; //REMOVE=
           $hashed = $row['password'];
           $id = $row['id'];
           //Use password_verify to check unhashed password is same as hashed password
