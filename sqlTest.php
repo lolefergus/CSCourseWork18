@@ -26,14 +26,15 @@ include($root.'/includes/connect.php');
     //sets values from info entered on page
     $email = 'demoemail@uw.cy';
       if (preg_match('#([A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,})#i', $email)=== 1) {
-      print'email match';//remove after tesing
+      print'email match';//REMOVE
       $password = 'pword';
-        print$password;//REMOVE
       //searches for matching users
       $search = sqlsrv_query($conn, "SELECT * FROM accounts WHERE email='$email'");
+      print $search; //REMOVE
       //Check num result found, then if only one
       $count = sqlsrv_num_rows($search);
       if(1 == $count){
+        print 'found match'; //REMOVE
         //gets hashed password from DB
         while($row = sqlsrv_fetch_array($search)){
           $hashed = $row['password'];
