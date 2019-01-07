@@ -41,6 +41,7 @@ include($root.'/includes/connect.php');
           $id = $row['id'];
           //Use password_verify to check unhashed password is same as hashed password
           if (password_verify($password, $encrypted)) {
+            print 'password match'; //REMOVE
             //Start a session
             session_start();
             //Use user's id to identify the session
