@@ -50,10 +50,12 @@ include($root.'/includes/connect.php');
             // header('location: /account/'); UNCOMENT AFTER DEBUGGING
             } else {
               $message = 'There was an error with your details.';
+              echo $message; //REMOVE
             }
           }
         } else {
           $message = 'There was an error with your details.';
+          echo $message; //REMOVE
         }
     }
     print'email invalid';
