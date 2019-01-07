@@ -1,16 +1,16 @@
 <html>
 <?php
 $root = $_SERVER['DOCUMENT_ROOT'];
-$title = "N - Templates - Headers";
+$title = "Testing";
 include($root.'/includes/head.php');
 include($root.'/includes/connect.php');
 ?>
   <head>
-    <title>SQL Statment Test</title>
+    <title>Statment Test</title>
   </head>
 
   <body>
-    <header>SQL Output:</header>
+    <header>PHP Output:</header>
     <?php
 
     // //SQL Query
