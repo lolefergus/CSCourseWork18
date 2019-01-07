@@ -63,7 +63,7 @@ include($root.'/includes/connect.php');
       <div class="col-12">
           <div class="form-group has-floating-label">
               <label class="control-label">Email</label>
-              <input type="text" class="form-control form-control-lg" placeholder="">
+              <input type="text" class="form-control form-control-lg" placeholder="email">
               <span class="bar"></span>
             </div>
           </div>
@@ -73,11 +73,11 @@ include($root.'/includes/connect.php');
           <div class="col-12">
             <div class="form-group has-floating-label">
               <label class="control-label">Password</label>
-              <input type="password" class="form-control form-control-lg" placeholder="">
+              <input type="password" class="form-control form-control-lg" placeholder="pWord">
               <span class="bar"></span>
             </div>
           </div>
         </div>
-        
+
   </body>
 </html>
