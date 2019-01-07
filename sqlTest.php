@@ -36,7 +36,6 @@ include($root.'/includes/connect.php');
         print 'found match'; //REMOVE
         //gets hashed password from DB
         while($row = sqlsrv_fetch_array($search)){
-          print 'is it reaching here?'; //REMOVE
           $hashed = $row['password'];
           $id = $row['id'];
           //Use password_verify to check unhashed password is same as hashed password
