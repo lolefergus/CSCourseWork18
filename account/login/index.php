@@ -5,6 +5,38 @@
     $title = "Login";
     include($root.'/includes/head.php');
     include($root.'/includes/connect.php');
+
+    if(isset($_POST['login'])){
+        //sets values from info entered on page
+        $email = $_REQUEST[$_POST['email']];
+        $password = $_REQUEST[$_POST['password']];
+        //searches for matching users
+        $search = sqlsrv_query($conn, "SELECT * FROM accounts WHERE email='$email'");
+        //Check num result found, then if only one
+        $count = sqlsrv_num_rows($search);
+        if(1 == $count){
+            //gets hashed password from DB
+            while($row = sqlsrv_fetch_array($search)){
+                $hashed = $row['password'];
+                $id = $row['id'];
+                //Use password_verify to check unhashed password is same as hashed password
+                if (password_verify($password, $encrypted)) {
+                    //Start a session
+                    session_start();
+                    //Use user's id to identify the session
+                    $_SESSION['id']=$id;
+                    $_SESSION['last_activity'] = time(); //your last activity was now, having logged in.
+                    //sends user to account homepage
+                    header('location: /account/');
+                } else {
+                    $message = '<p>There was an error with your details.</p>';
+                }
+            }
+        } else {
+            Echo '<p>There was an error with your details.</p>';
+        }
+    }
+
 ?>
 <body>
 
@@ -49,7 +81,7 @@
 
                       <div class="col-lg-3 col-md-4">
                         <div class="mt-4">
-                          <button type="button" class="btn btn-styled btn-base-1 btn-circle">
+                          <button type="submit" name="login" class="btn btn-styled btn-base-1 btn-circle">
                             Login
                           </button>
                         </div>
