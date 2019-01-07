@@ -12,12 +12,12 @@
             </p>
 
             <div class="copyright mt-4">
-              <!-- <p>
+              <p>
               Copyright © 2018                                <a href="https://webpixels.io" target="_blank">
               <strong>Webpixels</strong>
             </a> -
             All rights reserved
-          </p> -->
+          </p>
         </div>
       </div>
     </div>
@@ -31,9 +31,9 @@
         <ul class="footer-links">
           <li><a href="/" title="Home">Home</a></li>
           <li><a href="/news/" title="News">News</a></li>
-          <li><a href="#" title=""></a>null</li>
-          <li><a href="#" title="Blog">Blog</a></li>
-          <li><a href="#" title="Jobs">FAQ</a></li>
+          <li><a href="/gallery/" title="Gallery"></a>Gallery</li>
+          <li><a href="/account/create/" title="Register">Register for the Program</a></li>
+          <li><a href="#" title="">NULL</a></li>
         </ul>
       </div>
     </div>
