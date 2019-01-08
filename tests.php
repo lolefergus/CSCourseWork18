@@ -27,7 +27,7 @@ include($root.'/includes/connect.php');
     $email = 'ferguslole@online.sch.im';
       if (preg_match('#([A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,})#i', $email)=== 1) {
       print'email match';//REMOVE
-      $password = 'pword';
+      $password = 'password';
       //searches for matching users
       $search = sqlsrv_query($conn, "SELECT * FROM accounts WHERE email='$email'");
       //Check num result found, then if only one
