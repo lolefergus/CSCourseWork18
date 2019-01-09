@@ -8,8 +8,8 @@ CREATE TABLE news (
     body nvarchar(255) NOT NULL,
     image nvarchar(10),
     -- Keys
-    PRIMARY KEY (id)
-    FOREIGN KEY (thisTable) REFERENCES accounts(othertable)
+    PRIMARY KEY (id),
+    FOREIGN KEY (authorId) REFERENCES accounts(id)
 
 );
 
@@ -37,7 +37,8 @@ CREATE TABLE meetings (
     meetingType nchar(1) NOT NULL,
     organiserId int NOT NULL,
     -- Keys
-    PRIMARY KEY (id)
+    PRIMARY KEY (id),
+    FOREIGN KEY (organiserId) REFERENCES accounts(id)
 );
 
 CREATE TABLE resources (
@@ -47,5 +48,6 @@ CREATE TABLE resources (
     location nvarchar(50) NOT NULL,
     ownerId int NOT NULL,
     -- Keys
-    PRIMARY KEY (id)
+    PRIMARY KEY (id),
+    FOREIGN KEY (ownerId) REFERENCES accounts(id)
 );
