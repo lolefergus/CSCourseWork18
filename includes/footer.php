@@ -45,7 +45,7 @@
             </a>
           </li>
           <li>
-            <a href="#" class="instagram" target="_blank" data-toggle="tooltip" data-original-title="Instagram">
+            <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Finstagram.com%2Fcareerready_iom%3Futm_source%3Dig_profile_share%26igshid%3D18s2un4nkn388%26fbclid%3DIwAR2L4PVWG6yxubNWLLr06K9QyioKBHUe8BX6Jn2cHHG_leVlXDALirkevvw&h=AT2jp2Af8ZUxmibdv5vR9Lha2ZXlwVrkM1oCt6aeZlI6ZgqhvcmKR6b0xeIR11gmjRNgr0u8V2dKnRiO4MBVcR7DoCaj-br85bFJpYmbM55LDXnvBgNLTEDW0UscDB7EvCp1-Q2kUPgXp8vaWOohEA" class="instagram" target="_blank" data-toggle="tooltip" data-original-title="Instagram">
               <i class="fa fa-instagram"></i>
             </a>
           </li>
