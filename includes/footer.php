@@ -12,7 +12,7 @@
             </p>
         </div>
       </div>
-    </div>
+
 
     <div class="col-lg-2">
       <div class="col">
@@ -29,7 +29,7 @@
         </ul>
       </div>
     </div>
-
+    </div>
 
 
     <div class="col-lg-3">
