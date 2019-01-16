@@ -17,13 +17,13 @@
     <div class="col-lg-2">
       <div class="col">
         <h4 class="heading heading-xs strong-600 text-uppercase mb-1">
-          Support
+          Links
         </h4>
 
         <ul class="footer-links">
           <li><a href="/" title="Home">Home</a></li>
           <li><a href="/news/" title="News">News</a></li>
-          <li><a href="/gallery/" title="Gallery"></a>Gallery</li>
+          <li><a href="/gallery/" title="home"></a>Gallery</li>
           <li><a href="/account/create/" title="Register">Register for the Program</a></li>
           <li><a href="#" title="">NULL</a></li>
         </ul>
