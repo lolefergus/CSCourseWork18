@@ -16,6 +16,12 @@
           <!-- Latest news -->
           <section class="container " style="padding-top: 20px; padding-bottom: 20px;">
             <div>
+              <h3>What is Career Ready?</h3>
+            </div>
+            <div>
+              <p>Sed et ex eget urna cursus auctor. Cras diam ipsum, ullamcorper ut lobortis sed, malesuada vel risus. Morbi luctus tincidunt dolor, id tristique augue sodales ut. Nam commodo augue sed risus cursus, quis convallis mi pulvinar. Aliquam fringilla fringilla viverra. Vestibulum elementum rutrum ipsum ac fringilla. Pellentesque blandit, neque id accumsan scelerisque, justo turpis fringilla elit, ut posuere ante dui non libero. Sed cursus nulla ac pellentesque placerat. Aliquam sed maximus magna. Suspendisse vulputate finibus ultrices. Etiam at ipsum ut lacus interdum faucibus. Nunc eleifend augue malesuada, tempor diam sed, gravida dolor. Nullam interdum est in neque lacinia scelerisque. Cras elit nisl, dapibus sed ex vitae, laoreet pharetra lacus. Sed sit amet aliquet leo, in eleifend tellus.</p>
+            </div>
+            <div>
               <h3>Latest News</h3>
             </div>
             <div class="row card-group">
