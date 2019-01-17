@@ -27,16 +27,17 @@ include($root.'/includes/connect.php');
 
     while ($row = sqlsrv_fetch_array($Query))
     {
-    $id = $row['id'];
-    $title = $row['title'];
-    $body = $row['body'];
-    $image = $row['image'];
+      $id = $row['id'];
+      $title = $row['title'];
+      $body = $row['body'];
+      $image = $row['image'];
 
-    print $id, "HUH";
-    print $title;
-    print $body;
-    print $image;
-  }
+      print "It be getting the far";
+      print $id;
+      print $title;
+      print $body;
+      print $image;
+    }
     ?>
 
   </body>
