@@ -16,12 +16,12 @@ include($root.'/includes/connect.php');
     $id = 2;
     $Query = sqlsrv_query($conn,"SELECT * FROM news WHERE id = $id");
     print $Query;
-    print $Query['title'];
+    echo $Query['title'];
 
-    echo '??';
+    echo '<p>??</p>';
 
     $row = sqlsrv_fetch_array($Query);
-    print $row;
+    echo $row;
     // while ($row = sqlsrv_fetch_array($Query))
     // {
     //   $title = $row['title'];
