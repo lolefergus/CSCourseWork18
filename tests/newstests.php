@@ -16,6 +16,7 @@ include($root.'/includes/connect.php');
     $id = 2;
     $Query = sqlsrv_query($conn,"SELECT * FROM news WHERE id = $id");
     print $Query;
+    print $Query['title'];
 
     $row = sqlsrv_fetch_array($Query);
     print $row;
