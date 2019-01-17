@@ -1,7 +1,7 @@
 <!-- Navbar -->
 <section class="sct-color-1">
   <nav class="navbar navbar-expand-lg navbar--uppercase  navbar navbar-inverse bg-dark ">
-    <div class="container container-lg navbar-container my-3">
+    <div class="container navbar-container my-3">
       <!-- Brand/Logo -->
       <a class="navbar-brand" href="/">
         <img src="/images/logo.png" class="d-none d-lg-inline-block" style="max-height:60px;" alt="Boomerang">
@@ -16,7 +16,7 @@
           </button>
         </div>
 
-        <div class="collapse navbar-collapse  justify-content-end" name="navbar_main">
+        <div class="collapse navbar-collapse  justify-content-end float-right" name="navbar_main">
 
 
           <!-- Navbar links -->
