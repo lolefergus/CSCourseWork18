@@ -22,6 +22,7 @@ include($root.'/includes/connect.php');
 
     $row = sqlsrv_fetch_array($Query);
     echo $row;
+    echo 'EEE';
     // while ($row = sqlsrv_fetch_array($Query))
     // {
     //   $title = $row['title'];
