@@ -32,7 +32,7 @@ include($root.'/includes/connect.php');
     $body = $row['body'];
     $image = $row['image'];
 
-    print $id;
+    print $id, "HUH";
     print $title;
     print $body;
     print $image;
