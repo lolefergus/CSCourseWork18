@@ -25,7 +25,8 @@ include($root.'/includes/connect.php');
     $Query = sqlsrv_query($conn,"SELECT * FROM news WHERE id = $id");
     print $Query;
 
-    $row = sqlsrv_fetch_array($Query)
+    while ($row = sqlsrv_fetch_array($Query))
+    {
     $id = $row['id'];
     $title = $row['title'];
     $body = $row['body'];
@@ -35,7 +36,7 @@ include($root.'/includes/connect.php');
     print $title;
     print $body;
     print $image;
-
+  }
     ?>
 
   </body>
