@@ -18,6 +18,8 @@ include($root.'/includes/connect.php');
     print $Query;
     print $Query['title'];
 
+    echo '??';
+
     $row = sqlsrv_fetch_array($Query);
     print $row;
     // while ($row = sqlsrv_fetch_array($Query))
