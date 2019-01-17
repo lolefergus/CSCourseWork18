@@ -1,0 +1,30 @@
+<html>
+<?php
+$root = $_SERVER['DOCUMENT_ROOT'];
+$title = "Testing";
+include($root.'/includes/head.php');
+include($root.'/includes/connect.php');
+?>
+  <head>
+    <title>Statment Test</title>
+  </head>
+
+  <body>
+    <header>PHP Output:</header>
+    <?php
+
+    // //SQL Query
+    // $Query = sqlsrv_query ($conn, "SELECT * FROM accounts");
+    // // $row = sqlsrv_fetch_array ($Query);
+    // // var_dump($row);
+    //
+    // while($row = sqlsrv_fetch_array($Query)){
+    //   print($row["email"]);
+    // }
+    $Query = sqlsrv_query($conn,"SELECT * FROM news WHERE id = $id");
+    print $Query;
+
+    ?>
+
+  </body>
+</html>
