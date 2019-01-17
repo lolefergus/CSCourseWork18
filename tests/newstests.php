@@ -13,14 +13,6 @@ include($root.'/includes/connect.php');
     <header>PHP Output:</header>
     <?php
 
-    // //SQL Query
-    // $Query = sqlsrv_query ($conn, "SELECT * FROM accounts");
-    // // $row = sqlsrv_fetch_array ($Query);
-    // // var_dump($row);
-    //
-    // while($row = sqlsrv_fetch_array($Query)){
-    //   print($row["email"]);
-    // }
     $id = 2;
     $Query = sqlsrv_query($conn,"SELECT * FROM news WHERE id = $id");
     print $Query;
