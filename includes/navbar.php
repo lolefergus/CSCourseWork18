@@ -16,7 +16,7 @@
           </button>
         </div>
 
-        <div class="collapse navbar-collapse  justify-content-end float-right" name="navbar_main">
+        <div class="collapse navbar-collapse  float-right" name="navbar_main">
 
 
           <!-- Navbar links -->
