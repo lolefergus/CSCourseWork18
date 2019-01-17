@@ -27,7 +27,6 @@ include($root.'/includes/connect.php');
 
     while ($row = sqlsrv_fetch_array($Query))
     {
-      $id = $row['id'];
       $title = $row['title'];
       $body = $row['body'];
       $image = $row['image'];
