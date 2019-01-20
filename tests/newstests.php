@@ -25,7 +25,12 @@ include($root.'/includes/connect.php');
     echo '<p>??</p>';
 
     $row = sqlsrv_fetch_array($Query);
-    echo $row;
+    echo $row['id'];
+    echo $row['title'];
+    echo $row['authorId'];
+    echo $row['body'];
+    echo $row['image'];
+
     echo 'EEE';
     // while ($row = sqlsrv_fetch_array($Query))
     // {
