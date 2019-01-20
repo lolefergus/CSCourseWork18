@@ -17,8 +17,7 @@ include($root.'/includes/connect.php');
     <?php
     include($root.'/includes/navbar.php');
 
-    while ($row = sqlsrv_fetch_array($Query))
-    {
+
       $title = $row['title'];
       $body = $row['body'];
       $image = $row['image'];
@@ -59,7 +58,6 @@ include($root.'/includes/connect.php');
         </div>
       </section>
       ';
-    };
 
 
     include($root.'/includes/footer.php');
