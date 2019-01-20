@@ -17,7 +17,8 @@ include($root.'/includes/connect.php');
     <?php
     include($root.'/includes/navbar.php');
 
-
+    $row = sqlsrv_fetch_array($Query)
+    
       $title = $row['title'];
       $body = $row['body'];
       $image = $row['image'];
