@@ -18,9 +18,9 @@ include($root.'/includes/connect.php');
     print $Query;
     echo $Query['id'];
     echo $Query['title'];
-    echo $Query['authorId']
+    echo $Query['authorId'];
     echo $Query['body'];
-    echo $Query['image']
+    echo $Query['image'];
 
     echo '<p>??</p>';
 
