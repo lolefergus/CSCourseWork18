@@ -13,7 +13,7 @@ include($root.'/includes/connect.php');
     <header>PHP Output:</header>
     <?php
 
-    $id = 2;
+    $id = 7;
     $Query = sqlsrv_query($conn,"SELECT * FROM news WHERE id = $id");
     print $Query;
     echo $Query['id'];
