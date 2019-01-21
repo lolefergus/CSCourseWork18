@@ -22,8 +22,11 @@ include($root.'/includes/connect.php');
     include($root.'/includes/navbar.php');
 
       $title = $row['title'];
+      print $title;
       $body = $row['body'];
+      print $body;
       $image = $row['image'];
+      print $image;
       ?>
 
       <!-- PAGE HEADER -->
