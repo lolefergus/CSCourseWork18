@@ -8,6 +8,7 @@ $password = "m1Cr020ft"; //DB Password
 $dbName = "CompSciCourseWork2019"; //DB name
 $dbAddress = "tcp:compscicoursework.database.windows.net,1433";//DB adress protcol,adress,port
 
+//Conects to DB
 try {
     $conn = new PDO("sqlsrv:server = ". $dbAddress ."; Database = ". $dbName, $userName, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -17,7 +18,7 @@ catch (PDOException $e) {
     die(print_r($e));
 }
 
-//Generates conection string:
+//Sets up connection string for querys
 $connectionInfo = array("UID" => $userEmail, "pwd" => $password, "Database" => $dbName, "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = $dbAddress;
 $conn = sqlsrv_connect($serverName, $connectionInfo);
