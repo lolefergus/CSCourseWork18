@@ -39,8 +39,6 @@
     <!-- Custom style - Remove if not necessary -->
     <link type="text/css" href="/assets/css/custom-style.css" rel="stylesheet">
 
-    <!-- Favicon -->
-    <link href="\images\logo.png" rel="icon" type="image/png">
 
 </head>
 <body>
