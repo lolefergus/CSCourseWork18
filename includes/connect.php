@@ -6,7 +6,7 @@ $userName = "fergusLole"; //username of account to access Database
 $userEmail = $userName . "@compscicoursework"; //domain used as extension of sign in
 $password = "m1Cr020ft"; //DB Password
 $dbName = "CompSciCourseWork2019"; //DB name
-$dbAddress = "tcp:compscicoursework.database.windows.net,1433";//DB address - protcol:adress,port
+$dbAddress = "tcp:compscicoursework.database.windows.net,1433";//DB address - protcol:name,port
 
 //Conects to DB
 try {
