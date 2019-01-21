@@ -8,7 +8,7 @@
     <title><?php print $title; ?> - Career Ready</title>
 
     <?php
-    include($root.'/include/scripts.php');
+    include($root."\include\scripts.php");
     ?>
 
     <!-- Bootstrap -->
@@ -40,7 +40,7 @@
     <link type="text/css" href="/assets/css/custom-style.css" rel="stylesheet">
 
     <!-- Favicon -->
-    <link href="/images/logo.png" rel="icon" type="image/png">
+    <link href="\images\logo.png" rel="icon" type="image/png">
 
 </head>
 <body>
