@@ -43,7 +43,7 @@ include($root.'/includes/head.php');
       </section>
 
       <section>
-        <div class="masonry-item col-sm-12 design justify-content-center" style="position: relative; height=100%">
+        <div class="masonry-item col-sm-12 design justify-content-center" style="position: relative; height=span">
             <div class="block block--style-5 mb-0">
               <div class="block-image">
                 <img src="<?php echo '/images/'.$image; ?>">
