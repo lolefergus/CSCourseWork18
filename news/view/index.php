@@ -5,12 +5,9 @@ $root = $_SERVER['DOCUMENT_ROOT'];
 
 //sources title
 $id = $_GET['id'];
-print $id;
 $Query = sqlsrv_query($conn,"SELECT * FROM news WHERE id = $id");
-print $Query;
 $row = sqlsrv_fetch_array($Query);
 $title = $row['title'];
-print $row['body'];
 
 include($root.'/includes/head.php');
 include($root.'/includes/connect.php');
@@ -22,11 +19,8 @@ include($root.'/includes/connect.php');
     include($root.'/includes/navbar.php');
 
       $title = $row['title'];
-      print $title;
       $body = $row['body'];
-      print $body;
       $image = $row['image'];
-      print $image;
       ?>
 
       <!-- PAGE HEADER -->
