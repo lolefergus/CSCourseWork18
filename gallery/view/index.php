@@ -3,13 +3,14 @@
 <?php
 $root = $_SERVER['DOCUMENT_ROOT'];
 
+include($root.'/includes/connect.php');
 //sorces title
 $id = $_GET['id'];
 $Query = sqlsrv_query($conn,"SELECT title, image FROM news WHERE id = $id");
 $title = $_GET['title'];
 
 include($root.'/includes/head.php');
-include($root.'/includes/connect.php');
+
 ?>
 <body>
 
