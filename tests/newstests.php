@@ -18,8 +18,7 @@ include($root.'/includes/connect.php');
 
     $row = sqlsrv_fetch_array($Query);
 
-    while ($row = sqlsrv_fetch_array($Query))
-    {
+
       $title = $row['title'];
       $body = $row['body'];
       $image = $row['image'];
@@ -29,7 +28,6 @@ include($root.'/includes/connect.php');
       print $title;
       print $body;
       print $image;
-    }
     ?>
 
   </body>
