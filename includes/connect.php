@@ -15,7 +15,7 @@ try {
 catch (PDOException $e) {
     print("Error connecting to SQL Server.");
     die(print_r($e));
-
+}
 
 //Generates conection string:
 $connectionInfo = array("UID" => $userEmail, "pwd" => $password, "Database" => $dbName, "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
