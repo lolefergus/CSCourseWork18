@@ -8,7 +8,7 @@
     <title><?php print $title; ?> - Career Ready</title>
 
     <?php
-    include($root.'/include/scripts.php');
+    include($root.'\include\scripts.php');
     ?>
 
     <!-- Bootstrap -->
