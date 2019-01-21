@@ -15,7 +15,7 @@ catch (PDOException $e) {
     die(print_r($e));
 }
 
-// SQL Server Extension Sample Code:
+//Generates conection string:
 $connectionInfo = array("UID" => "ferguslole@compscicoursework", "pwd" => $password, "Database" => $dbname, "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:compscicoursework.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
