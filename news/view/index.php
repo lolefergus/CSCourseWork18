@@ -3,14 +3,18 @@
 <?php
 $root = $_SERVER['DOCUMENT_ROOT'];
 
+//conects to Database
+include($root.'/includes/connect.php');
+
 //sources title
 $id = $_GET['id'];
 $Query = sqlsrv_query($conn,"SELECT * FROM news WHERE id = $id");
 $row = sqlsrv_fetch_array($Query);
 $title = $row['title'];
 
+//sets up page
 include($root.'/includes/head.php');
-include($root.'/includes/connect.php');
+
 ?>
 <body>
 
