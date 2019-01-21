@@ -7,7 +7,8 @@ include($root.'/includes/connect.php');
 //sorces title
 $id = $_GET['id'];
 $Query = sqlsrv_query($conn,"SELECT title, image FROM news WHERE id = $id");
-$title = $_GET['title'];
+    $row = sqlsrv_fetch_array($Query);
+$title = $row['title'];
 
 include($root.'/includes/head.php');
 
@@ -18,8 +19,8 @@ include($root.'/includes/head.php');
     <?php
     include($root.'/includes/navbar.php');
 
-    while ($row = sqlsrv_fetch_array($Query))
-    {
+
+
       $title = $row['title'];
       $image = $row['image'];
       ?>
@@ -51,7 +52,7 @@ include($root.'/includes/head.php');
         </div>
       </section>
       <?php
-    }
+
     include($root.'/includes/footer.php');
     ?>
   </main>
