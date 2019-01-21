@@ -3,7 +3,7 @@ ini_set('display_errors', 'On');
   error_reporting(E_ALL | E_STRICT);
 
 $userName = "fergusLole"; //username of account to access Database
-$dbDomain = "@compscicoursework"; //domain used as extension of sign in
+$userEmail = $userName . "@compscicoursework"; //domain used as extension of sign in
 $password = "m1Cr020ft"; //DB Password
 $dbName = "CompSciCourseWork2019"; //DB name
 $dbAddress = "tcp:compscicoursework.database.windows.net,1433";//DB adress protcol,adress,port
@@ -18,7 +18,7 @@ catch (PDOException $e) {
 
 
 //Generates conection string:
-$connectionInfo = array("UID" => $userName . $dbDomain, "pwd" => $password, "Database" => $dbName, "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+$connectionInfo = array("UID" => , "pwd" => $password, "Database" => $dbName, "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = $dbAddress;
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 ?>
