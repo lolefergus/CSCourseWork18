@@ -7,7 +7,7 @@ include($root.'/includes/connect.php');
 //sorces title
 $id = $_GET['id'];
 $Query = sqlsrv_query($conn,"SELECT title, image FROM news WHERE id = $id");
-    $row = sqlsrv_fetch_array($Query);
+$row = sqlsrv_fetch_array($Query);
 $title = $row['title'];
 
 include($root.'/includes/head.php');
