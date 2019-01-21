@@ -34,7 +34,9 @@ include($root.'/includes/connect.php');
             <div class="col-8 my-3">
               <div class="row py-5">
                 <div class="col-12">
-                  <h1 class="heading heading-inverse heading-1 strong-400 text-normal"><?php echo $title; ?></h1>
+                  <h1 class="heading heading-inverse heading-1 strong-400 text-normal">
+                    <?php echo $title; ?>
+                  </h1>
                   <span class="clearfix"></span>
                 </div>
               </div>
