@@ -18,7 +18,7 @@ catch (PDOException $e) {
 
 
 //Generates conection string:
-$connectionInfo = array("UID" => , "pwd" => $password, "Database" => $dbName, "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+$connectionInfo = array("UID" => $userEmail, "pwd" => $password, "Database" => $dbName, "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = $dbAddress;
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 ?>
