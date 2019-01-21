@@ -6,7 +6,8 @@ $root = $_SERVER['DOCUMENT_ROOT'];
 //sources title
 $id = $_GET['id'];
 $Query = sqlsrv_query($conn,"SELECT * FROM news WHERE id = $id");
-$title = $_Get['title'];
+$row = sqlsrv_fetch_array($Query);
+$title = $row['title'];
 
 include($root.'/includes/head.php');
 include($root.'/includes/connect.php');
@@ -16,8 +17,6 @@ include($root.'/includes/connect.php');
   <main class="body-wrap">
     <?php
     include($root.'/includes/navbar.php');
-
-    $row = sqlsrv_fetch_array($Query);
 
       $title = $row['title'];
       $body = $row['body'];
