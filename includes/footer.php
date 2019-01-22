@@ -8,12 +8,12 @@
             <img src="/images/logo.png" style="max-height:40px;">
             <span class="clearfix"></span>
             <p class="mt-3">
-              All the components included in Boomerang are built to the same level of quality as Bootstrap and highlighted with several example pages.
+              Career Ready Isle Of Man is an extension of Career Ready
             </p>
         </div>
       </div>
 
-
+      <!-- Site Map -->
     <div class="col-lg-2">
       <div class="col">
         <h4 class="heading heading-xs strong-600 text-uppercase mb-1">
@@ -31,7 +31,7 @@
     </div>
     </div>
 
-
+    <!-- Links to other Career Ready Pages -->
     <div class="col-lg-3">
       <div class="col">
         <h4 class="heading heading-xs strong-600 text-uppercase mb-1">
