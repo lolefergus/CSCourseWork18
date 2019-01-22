@@ -49,16 +49,6 @@
               <i class="fa fa-instagram"></i>
             </a>
           </li>
-          <li>
-            <a href="#" class="dribbble" target="_blank" data-toggle="tooltip" data-original-title="Dribbble">
-              <i class="fa fa-dribbble"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="dribbble" target="_blank" data-toggle="tooltip" data-original-title="Github">
-              <i class="fa fa-github"></i>
-            </a>
-          </li>
         </ul>
       </div>
     </div>
