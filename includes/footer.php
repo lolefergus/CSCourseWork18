@@ -8,7 +8,7 @@
             <img src="/images/logo.png" style="max-height:40px;">
             <span class="clearfix"></span>
             <p class="mt-3">
-              Career Ready Isle Of Man is an extension of Career Ready
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu orci suscipit, tempor arcu vel, blandit est. Curabitur quis sapien finibus, congue orci eu, viverra ipsum. Phasellus cursus a lorem ut malesuada. Aliquam tristique, nibh ullamcorper interdum ullamcorper, odio mauris fringilla elit, et fringilla lacus erat sed orci. Donec at consequat purus, sit amet bibendum tortor.
             </p>
         </div>
       </div>
