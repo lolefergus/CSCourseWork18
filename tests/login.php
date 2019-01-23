@@ -4,13 +4,16 @@ $title = "Login";
 include($root.'/includes/head.php');
 include($root.'/includes/connect.php');
 
+$email = "ferguslole@online.sch.im";
+$password = "password";
+
   echo "this bit works";
   //sets values from info entered on page
-  $email = $_REQUEST[$_POST['email']];
+  // $email = $_REQUEST[$_POST['email']];
   if (preg_match('\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b#i', $email)=== 1) {
     print'email match';//remove after tesing
-    $password = $_REQUEST[$_POST['password']];
-      print$password;//REMOVE
+    // $password = $_REQUEST[$_POST['password']];
+      print $password;//REMOVE
     //searches for matching users
     $search = sqlsrv_query($conn, "SELECT * FROM accounts WHERE email='$email'");
     //Check num result found, then if only one
