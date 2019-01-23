@@ -7,6 +7,7 @@
     include($root.'/includes/connect.php');
 
     if(isset($_POST['login'])){
+      echo "this bit works";
       //sets values from info entered on page
       $email = $_REQUEST[$_POST['email']];
       if (preg_match('\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b#i', $email)=== 1) {
