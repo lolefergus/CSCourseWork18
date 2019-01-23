@@ -76,7 +76,7 @@
                       <div class="col-12">
                         <div class="form-group has-floating-label">
                           <label class="control-label">Password</label>
-                          <input type="password" class="form-control form-control-lg" placeholder="">
+                          <input type="password" class="form-control form-control-lg" required placeholder="">
                           <span class="bar"></span>
                         </div>
                       </div>
