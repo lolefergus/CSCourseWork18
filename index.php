@@ -2,7 +2,7 @@
 <html>
 <?php
     $root = $_SERVER['DOCUMENT_ROOT'];
-    $title = "Home";
+    $title = "Home"; //sets page title
     include($root.'/includes/head.php');
     include($root.'/includes/connect.php');
 ?>
@@ -26,11 +26,15 @@
             </div>
             <div class="row card-group">
               <?php
+              //sets up query to ready 3 latest articles
               $Query = sqlsrv_query($conn, "SELECT TOP (3) * FROM news");
+              //if finds results
               if ($Query)
               {
+                //repeates for each of 3 results
                 while ($row = sqlsrv_fetch_array($Query))
                 {
+                //gets variables from query, for specific result
                 $id = $row['id'];
                 $title = $row['title'];
                 $body = $row['body'];
@@ -40,6 +44,7 @@
                 // limmits body text displayed
                 $cutBody = substr($body,0,300);
 
+                //displays result with contets filled from database
                 echo'
                 <div class="card col-4">
                   <input type="hidden" name="id" value="'.$id.'">
@@ -54,6 +59,7 @@
               }
               }
               else {
+                //if doesn't exist will output error
                 print ("Error with Query:");
                 print (sqlsrv_errors (SQLSRV_ERR_ALL));
               }
