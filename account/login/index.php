@@ -66,7 +66,7 @@
                   <div class="col-12">
                       <div class="form-group has-floating-label">
                           <label class="control-label">Email</label>
-                          <input type="text" class="form-control form-control-lg" placeholder="">
+                          <input type="text" class="form-control form-control-lg" required="true" placeholder="">
                           <span class="bar"></span>
                         </div>
                       </div>
