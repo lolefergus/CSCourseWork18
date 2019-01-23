@@ -10,7 +10,7 @@ $password = "password";
   echo "this bit works";
   //sets values from info entered on page
   // $email = $_REQUEST[$_POST['email']];
-  if (preg_match('[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}#i', $email)=== 1) {
+  if (preg_match('[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}', $email)=== 1) {
     print'email match';//remove after tesing
     // $password = $_REQUEST[$_POST['password']];
       print $password;//REMOVE
@@ -40,7 +40,9 @@ $password = "password";
         $message = 'There was an error with your details.';
       }
   }
-  print'email invalid';
+  else {
+    print'email invalid';
+  }
 
 
 ?>
