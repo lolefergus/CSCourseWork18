@@ -4,7 +4,6 @@ $title = "Login";
 include($root.'/includes/head.php');
 include($root.'/includes/connect.php');
 
-if(isset($_POST['login'])){
   echo "this bit works";
   //sets values from info entered on page
   $email = $_REQUEST[$_POST['email']];
@@ -39,6 +38,6 @@ if(isset($_POST['login'])){
       }
   }
   print'email invalid';
-}
+
 
 ?>
