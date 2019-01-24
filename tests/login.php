@@ -9,7 +9,7 @@ $password = "password";
 
   //sets values from info entered on page
   // $email = $_REQUEST[$_POST['email']];
-  if (preg_match( "[a-zA-Z0-9_%\+-]+(\.[a-zA-Z0-9_%\+-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z]+)+", $email)) {
+  if (print preg_match( "[a-zA-Z0-9_%\+-]+(\.[a-zA-Z0-9_%\+-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z]+)+", $email)) {
     print'email match';//remove after tesing
     // $password = $_REQUEST[$_POST['password']];
       print $password;//REMOVE
