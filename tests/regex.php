@@ -1,5 +1,5 @@
 <?php
-ini_set('display_errors', 'On');
+// ini_set('display_errors', 'On');
 
 // $root = $_SERVER['DOCUMENT_ROOT'];
 // $title = "Login";
