@@ -7,7 +7,6 @@ include($root.'/includes/connect.php');
 $email = "ferguslole@online.sch.im";
 $password = "password";
 
-  echo "this bit works";
   //sets values from info entered on page
   // $email = $_REQUEST[$_POST['email']];
   if (preg_match( "[a-zA-Z0-9_%\+-]+(\.[a-zA-Z0-9_%\+-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z]+)+", $email)) {
