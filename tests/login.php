@@ -10,20 +10,20 @@ $password = "qwerty";
 //sets values from info entered on page
 // $email = $_REQUEST[$_POST['email']];
 if (print preg_match( "[a-zA-Z0-9_%\+-]+(\.[a-zA-Z0-9_%\+-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z]+)+", $email)) {
-  print'email match';//remove after tesing
   // $password = $_REQUEST[$_POST['password']];
-  print $password;//REMOVE
   //searches for matching users
   $search = sqlsrv_query($conn, "SELECT * FROM accounts WHERE email='$email'");
   //Check num result found, then if only one
   $count = sqlsrv_num_rows($search);
   if(1 == $count){
+    print "found email match"; //ROMOVE
       //gets hashed password from DB
       while($row = sqlsrv_fetch_array($search)){
         $hashed = $row['password'];
         $id = $row['id'];
         //Use password_verify to check unhashed password is same as hashed password
         if (password_verify($password, $encrypted)) {
+          print "Succesful"; //REMOVE
           //Start a session
           session_start();
           //Use user's id to identify the session
