@@ -5,7 +5,7 @@ include($root.'/includes/head.php');
 include($root.'/includes/connect.php');
 
 $email = "ferguslole@online.sch.im";
-$password = "password";
+$password = "qwerty";
 
 //sets values from info entered on page
 // $email = $_REQUEST[$_POST['email']];
