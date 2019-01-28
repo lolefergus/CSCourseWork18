@@ -12,14 +12,14 @@ $password = "qwerty";
 if (print preg_match( "[a-zA-Z0-9_%\+-]+(\.[a-zA-Z0-9_%\+-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z]+)+", $email)) {
   // $password = $_REQUEST[$_POST['password']];
   //searches for matching users
-  $search = sqlsrv_query($conn, "SELECT * FROM accounts WHERE email='$email'");
+  $search = sqlsrv_query($conn, "SELECT id, saltedPassword  FROM accounts WHERE email='$email'");
   //Check num result found, then if only one
   $count = sqlsrv_num_rows($search);
   if(1 == $count){
     print "found email match"; //ROMOVE
       //gets hashed password from DB
       while($row = sqlsrv_fetch_array($search)){
-        $hashed = $row['password'];
+        $hashed = $row['saltedPassword'];
         $id = $row['id'];
         //Use password_verify to check unhashed password is same as hashed password
         if (password_verify($password, $encrypted)) {
