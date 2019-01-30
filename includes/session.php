@@ -17,8 +17,8 @@
     }
 
     //Check user exisits
-    $check = mysqli_query($conn, "SELECT * FROM accounts WHERE id='$id'");
-    $count2 = mysqli_num_rows($check);
+    $check = sqlsrv_query($conn, "SELECT * FROM accounts WHERE id='$id'");
+    $count2 = sqlsrv_num_rows($check);
     if(!$count2 == 1){ //if there isn't one result will ask to re-login (e.g. if doesn't exist)
         header("location: /account/login/");//CHANGE
     };
