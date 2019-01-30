@@ -48,9 +48,10 @@ if (print preg_match( "[a-zA-Z0-9_%\+-]+(\.[a-zA-Z0-9_%\+-]+)*@[a-zA-Z0-9-]+(\.[
     $message = 'There was an error with your details.';
   }
 }
-else {
-    print'email invalid';
-  }
+else
+{
+  print'email invalid';
+}
 
 
 ?>
