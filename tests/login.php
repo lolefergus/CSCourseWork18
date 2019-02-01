@@ -17,7 +17,7 @@ if (print preg_match( "[a-zA-Z0-9_%\+-]+(\.[a-zA-Z0-9_%\+-]+)*@[a-zA-Z0-9-]+(\.[
   $search = sqlsrv_query($conn, "SELECT TOP (3) * FROM news");
   //Check num result found, then if only one
   $count = sqlsrv_num_rows($search);
-  if(1 == $count)
+  if(3 == $count)
   {
     print "found email match"; //ROMOVE
     //gets hashed password from DB
