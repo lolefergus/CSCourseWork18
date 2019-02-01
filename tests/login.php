@@ -10,11 +10,11 @@ $password = "qwerty";
 //sets values from info entered on page
 // $email = $_REQUEST[$_POST['email']];
 $escapedEmail = preg_quote ($email);
-if (print preg_match( "[a-zA-Z0-9_%\+-]+(\.[a-zA-Z0-9_%\+-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z]+)+", $email))
+if (print preg_match( "[a-zA-Z0-9_%\+-]+(\.[a-zA-Z0-9_%\+-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z]+)+", $escapedEmail))
 {
   // $password = $_REQUEST[$_POST['password']];
   //searches for matching users
-  $search = sqlsrv_query($conn, "SELECT TOP (3) * FROM news");
+  $search = sqlsrv_query($conn, "SELECT TOP (3) * FROM news"); //wrong query
   //Check num result found, then if only one
   $count = sqlsrv_num_rows($search);
   print $count;
