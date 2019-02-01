@@ -14,7 +14,7 @@ if (print preg_match( "[a-zA-Z0-9_%\+-]+(\.[a-zA-Z0-9_%\+-]+)*@[a-zA-Z0-9-]+(\.[
 {
   // $password = $_REQUEST[$_POST['password']];
   //searches for matching users
-  $search = sqlsrv_query($conn, "SELECT [id],[saltedPassword] FROM [dbo].[accounts] WHERE [email] = '$email'");
+  $search = sqlsrv_query($conn, "SELECT TOP (3) * FROM news");
   //Check num result found, then if only one
   $count = sqlsrv_num_rows($search);
   if(1 == $count)
