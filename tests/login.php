@@ -13,16 +13,16 @@ $escapedEmail = preg_quote ($email);
 if (print preg_match( "[a-zA-Z0-9_%\+-]+(\.[a-zA-Z0-9_%\+-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z]+)+", $escapedEmail))
 {
   //searches for matching users
-  $search = sqlsrv_query($conn, "SELECT id, saltedPassword FROM accounts WHERE email = $email");
-  print $search . "<p></p>";
+  $Query = sqlsrv_query($conn, "SELECT id, saltedPassword FROM accounts WHERE email = $email");
+  print $Query . "<p></p>";
   //Check num result found, then if only one
-  $count = sqlsrv_num_rows($search);
+  $count = sqlsrv_num_rows($Query);
   print $count;
   if(1 == $count) //checks only one match
   {
     print "found email match"; //ROMOVE
     //gets hashed password from DB
-    while($row = sqlsrv_fetch_array($search))
+    while($row = sqlsrv_fetch_array($Query))
     {
       $hashed = $row['saltedPassword'];
       $id = $row['id'];
