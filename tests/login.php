@@ -12,7 +12,6 @@ $password = "qwerty";
 $escapedEmail = preg_quote ($email);
 if (print preg_match( "[a-zA-Z0-9_%\+-]+(\.[a-zA-Z0-9_%\+-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z]+)+", $escapedEmail))
 {
-  // $password = $_REQUEST[$_POST['password']];
   //searches for matching users
   $search = sqlsrv_query($conn, "SELECT id, saltedPassword FROM accounts WHERE email = $email");
   //Check num result found, then if only one
@@ -27,6 +26,7 @@ if (print preg_match( "[a-zA-Z0-9_%\+-]+(\.[a-zA-Z0-9_%\+-]+)*@[a-zA-Z0-9-]+(\.[
       $hashed = $row['saltedPassword'];
       $id = $row['id'];
       //Use password_verify to check unhashed password is same as hashed password
+      // $password = $_REQUEST[$_POST['password']];
       if (password_verify($password, $encrypted))
       {
         print "Succesful"; //REMOVE
