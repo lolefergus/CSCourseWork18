@@ -32,12 +32,19 @@ if (print preg_match( "[a-zA-Z0-9_%\+-]+(\.[a-zA-Z0-9_%\+-]+)*@[a-zA-Z0-9-]+(\.[
       {
         print "Succesful"; //REMOVE
         //Start a session
-        session_start();
-        //Use user's id to identify the session
-        $_SESSION['id']=$id;
-        $_SESSION['last_activity'] = time(); //your last activity was now, having logged in.
-        //sends user to account homepage
-        // header('location: /account/'); UNCOMENT AFTER DEBUGGING
+        if (session_status() = 1)
+        {
+          session_start();
+          //Use user's id to identify the session
+          $_SESSION['id']=$id;
+          $_SESSION['last_activity'] = time(); //your last activity was now, having logged in.
+          //sends user to account homepage
+          // header('location: /account/'); UNCOMENT AFTER DEBUGGING
+        }
+        else
+        {
+         print "Already signed in";
+        }
       }
       else
       {
