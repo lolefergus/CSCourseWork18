@@ -45,9 +45,6 @@ if (print preg_match( "[a-zA-Z0-9_%\+-]+(\.[a-zA-Z0-9_%\+-]+)*@[a-zA-Z0-9-]+(\.[
       }
     }
   }
-  elseif ($count = null){
-    print "False";
-  }
   else
   {
     print 'There was an error with your details.';
