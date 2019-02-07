@@ -45,7 +45,7 @@ if (print preg_match( "[a-zA-Z0-9_%\+-]+(\.[a-zA-Z0-9_%\+-]+)*@[a-zA-Z0-9-]+(\.[
       }
     }
   }
-  elseif ($count = False){
+  elseif ($count = null){
     print "False";
   }
   else
