@@ -14,7 +14,7 @@ if (print preg_match( "[a-zA-Z0-9_%\+-]+(\.[a-zA-Z0-9_%\+-]+)*@[a-zA-Z0-9-]+(\.[
 {
   //searches for matching users
   $Query = sqlsrv_query($conn, "SELECT * FROM accounts WHERE email = '$email';");
-  print $Query . "<p></p>";
+  print "<p></p>". $Query . "<p></p>";
   //Check num result found, then if only one
   $count = sqlsrv_num_rows($Query);
   print $count;
