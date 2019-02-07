@@ -28,7 +28,7 @@ if (print preg_match( "[a-zA-Z0-9_%\+-]+(\.[a-zA-Z0-9_%\+-]+)*@[a-zA-Z0-9-]+(\.[
       $id = $row['id'];
       //Use password_verify to check unhashed password is same as hashed password
       // $password = $_REQUEST[$_POST['password']];
-      if (password_verify($password, $encrypted))
+      if (password_verify($password, $hashed))
       {
         print "Succesful"; //REMOVE
         //Start a session
