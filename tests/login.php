@@ -13,8 +13,7 @@ $escapedEmail = preg_quote ($email);
 if (print preg_match( "[a-zA-Z0-9_%\+-]+(\.[a-zA-Z0-9_%\+-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z]+)+", $escapedEmail))
 {
   //searches for matching users
-  $params = array();
-  $Query = sqlsrv_query($conn, "SELECT * FROM accounts WHERE email = '$email'", $params, array(SQLSRV_CURSOR_STATIC));
+  $Query = sqlsrv_query($conn, "SELECT * FROM accounts WHERE email = '$email'", array(SQLSRV_CURSOR_STATIC));
   print "<p></p>". $Query . "<p></p>";
   //Check num result found, then if only one
   $count = sqlsrv_num_rows($Query);
