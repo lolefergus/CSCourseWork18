@@ -32,7 +32,7 @@ if (print preg_match( "[a-zA-Z0-9_%\+-]+(\.[a-zA-Z0-9_%\+-]+)*@[a-zA-Z0-9-]+(\.[
       {
         print "Succesful"; //REMOVE
         //Start a session
-        if (session_status() = 1)
+        if (session_status() !== PHP_SESSION_ACTIVE)
         {
           session_start();
           //Use user's id to identify the session
