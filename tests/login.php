@@ -3,7 +3,7 @@ $root = $_SERVER['DOCUMENT_ROOT'];
 $title = "Login";
 include($root.'/includes/connect.php');
 
-$email = "o@online.sch.im";
+$email = "ferguslole@online.sch.im";
 $password = "qwerty";
 
 //sets values from info entered on page
