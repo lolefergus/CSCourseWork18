@@ -48,6 +48,7 @@ if (print preg_match( "[a-zA-Z0-9_%\+-]+(\.[a-zA-Z0-9_%\+-]+)*@[a-zA-Z0-9-]+(\.[
   else
   {
     print 'There was an error with your details.';
+    print sqlsrv_errors (SQLSRV_ERR_ALL )
   }
 }
 else
