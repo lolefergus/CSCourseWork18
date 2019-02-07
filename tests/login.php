@@ -33,6 +33,7 @@ if (print preg_match( "[a-zA-Z0-9_%\+-]+(\.[a-zA-Z0-9_%\+-]+)*@[a-zA-Z0-9-]+(\.[
         //Start a session
         if (session_status() !== PHP_SESSION_ACTIVE)
         {
+          print "Session started";
           session_start();
           //Use user's id to identify the session
           $_SESSION['id']=$id;
