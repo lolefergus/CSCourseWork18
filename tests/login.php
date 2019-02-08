@@ -9,7 +9,7 @@ $password = "qwerty";
 //sets values from info entered on page
 // $email = $_REQUEST[$_POST['email']];
 $escapedEmail = preg_quote ($email);
-if (print preg_match( "[a-zA-Z0-9_%\+-]+(\.[a-zA-Z0-9_%\+-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z]+)+", $escapedEmail))
+if (print preg_match( "([a-zA-Z0-9_%\+-])+(\.[a-zA-Z0-9_%\+-]+)*@([a-zA-Z0-9-])+(\.[a-zA-Z]+)+", $escapedEmail))
 {
   //searches for matching users
   $Query = sqlsrv_query($conn, "SELECT * FROM accounts WHERE email = '$email'", array(), array('Scrollable' => 'buffered'));
