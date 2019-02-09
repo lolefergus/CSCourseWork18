@@ -6,7 +6,7 @@ include($root.'/includes/connect.php');
 if(isset($_POST['login']))
 {
 //sets values from info entered on page
-$email = $_REQUEST[$_POST['email']];
+$email = $_POST['email']];
 $escapedEmail = preg_quote ($email);
 if (print preg_match( "[a-zA-Z0-9_%\+-]+(\.[a-zA-Z0-9_%\+-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z]+)+", $escapedEmail))
 {
