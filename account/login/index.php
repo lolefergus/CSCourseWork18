@@ -79,7 +79,7 @@ include($root.'/includes/head.php');
         <div class="container container-lg">
           <div class="row align-items-center cols-xs-space cols-sm-space cols-md-space">
             <div class="col-lg-6">
-              <form class="form-default form-material">
+              <form class="form-default form-material" action="process.php" method="post">
 
                 <div class="row col-12">
                   <h3>Login</h3>
@@ -89,7 +89,7 @@ include($root.'/includes/head.php');
                   <div class="col-12">
                       <div class="form-group has-floating-label">
                           <label class="control-label">Email</label>
-                          <input type="text" class="form-control form-control-lg" required="true" placeholder="">
+                          <input name="email" type="text" class="form-control form-control-lg" required="true" placeholder="">
                           <span class="bar"></span>
                         </div>
                       </div>
@@ -99,7 +99,7 @@ include($root.'/includes/head.php');
                       <div class="col-12">
                         <div class="form-group has-floating-label">
                           <label class="control-label">Password</label>
-                          <input type="password" class="form-control form-control-lg" required placeholder="">
+                          <input name="password" type="password" class="form-control form-control-lg" required placeholder="">
                           <span class="bar"></span>
                         </div>
                       </div>
