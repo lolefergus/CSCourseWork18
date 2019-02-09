@@ -79,7 +79,7 @@ include($root.'/includes/head.php');
         <div class="container container-lg">
           <div class="row align-items-center cols-xs-space cols-sm-space cols-md-space">
             <div class="col-lg-6">
-              <form class="form-default form-material" action="process.php" method="post">
+              <form class="form-default form-material" method="post">
 
                 <div class="row col-12">
                   <h3>Login</h3>
