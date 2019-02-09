@@ -3,6 +3,8 @@ $root = $_SERVER['DOCUMENT_ROOT'];
 $title = "Login";
 include($root.'/includes/connect.php');
 
+if(isset($_POST['email']))
+{print "Email Set";}
 if(isset($_POST['login']))
 {
 //sets values from info entered on page
