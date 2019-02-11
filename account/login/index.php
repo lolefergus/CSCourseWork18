@@ -44,7 +44,7 @@ if (print preg_match( "[a-zA-Z0-9_%\+-]+(\.[a-zA-Z0-9_%\+-]+)*@[a-zA-Z0-9-]+(\.[
         }
         else
         {
-         print "Already signed in";
+         $message =  "Already signed in";
         }
       }
       else
@@ -55,13 +55,16 @@ if (print preg_match( "[a-zA-Z0-9_%\+-]+(\.[a-zA-Z0-9_%\+-]+)*@[a-zA-Z0-9-]+(\.[
   }
   else
   {
-    print 'There was an error with your details.';
+    $message = 'There was an error with your details.';
   }
 }
 else
 {
-  print'email invalid';
+  $message = 'Invalid Email Format';
 }
+
+session_start();
+$_SESSION['message'] = $message;
 }
 
 include($root.'/includes/head.php');
@@ -86,6 +89,15 @@ include($root.'/includes/head.php');
                 <div class="row col-12">
                   <h3>Login</h3>
                 </div>
+
+                <?php
+                if (isset($_SESSION['message'])) {
+                  echo "
+                  <div class="row col-12">
+                    <h5>" . $_SESSION['message'] . "</h5>
+                  </div>";
+                }
+                 ?>
 
                 <div class="row">
                   <div class="col-12">
