@@ -4,7 +4,8 @@ $title = "Login";
 include($root.'/includes/connect.php');
 session_start();
 
-if ($_SESSION['active'] = true) {
+if ($_SESSION['active'] = true)
+{
   //if Already signed in
   header('location: /account/');
 }
