@@ -2,9 +2,20 @@
 $root = $_SERVER['DOCUMENT_ROOT'];
 $title = "Login";
 include($root.'/includes/connect.php');
+session_start();
 
+if ($_SESSION['active'] = true) {
+  //if Already signed in
+  header('location: /account/');
+}
+
+//remove
 if(isset($_POST['email']))
-{print "Email Set";}
+{
+  print "Email Set";
+}
+
+//if login button clicked
 if(isset($_POST['login']))
 {
 //sets values from info entered on page
@@ -32,12 +43,12 @@ if (print preg_match( "[a-zA-Z0-9_%\+-]+(\.[a-zA-Z0-9_%\+-]+)*@[a-zA-Z0-9-]+(\.[
       {
         print "Succesful"; //REMOVE
         //Start a session
-        if (session_status() !== PHP_SESSION_ACTIVE)
+        if ($_SESSION['active'] != true)
         {
           print "Session started";
-          session_start();
           //Use user's id to identify the session
           $_SESSION['id']=$id;
+          $_SESSION['active'] = true;
           $_SESSION['last_activity'] = time(); //your last activity was now, having logged in.
           //sends user to account homepage
           // header('location: /account/'); UNCOMENT AFTER DEBUGGING
@@ -62,8 +73,7 @@ else
 {
   $message = 'Invalid Email Format';
 }
-
-session_start();
+//passes message to HTML when reloaded
 $_SESSION['message'] = $message;
 }
 
@@ -91,6 +101,7 @@ include($root.'/includes/head.php');
                 </div>
 
                 <?php
+                //pulls error message from Post function
                 if (isset($_SESSION['message'])) {
                   echo "
                   <div class="row col-12">
