@@ -48,7 +48,7 @@ include($root.'/includes/head.php');
           <div class="col-8 my-3">
             <div class="row py-5">
               <div class="col-12">
-                <h5 class="heading heading-inverse heading-1 strong-400 text-normal">
+                <h5 class="heading heading-inverse heading-1 text-normal">
                   <?php echo $authorId; ?>
                 </h5>
                 <span class="clearfix"></span>
