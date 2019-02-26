@@ -10,18 +10,18 @@
 //check account type once session set up
 
 //checks how many times survey been taken
-if (sqlsrv_num_rows(sqlsrv_query($conn, "SELECT answer FROM skillSurveyAs WHERE studentId = id AND surveyNo = 3")) == 0)
+if (sqlsrv_has_rows (sqlsrv_query($conn, "SELECT answer FROM skillSurveyAs WHERE studentId = id AND surveyNo = 3")))
 {
+  $serveyNum = 4;
+}
+else if (sqlsrv_has_rows (sqlsrv_query($conn, "SELECT answer FROM skillSurveyAs WHERE studentId = id AND surveyNo = 2"))) {
   $serveyNum = 3;
 }
-else if (sqlsrv_num_rows(sqlsrv_query($conn, "SELECT answer FROM skillSurveyAs WHERE studentId = id AND surveyNo = 2")) == 0) {
+else if (sqlsrv_has_rows (sqlsrv_query($conn, "SELECT answer FROM skillSurveyAs WHERE studentId = id AND surveyNo = 1"))) {
   $serveyNum = 2;
 }
-else if (sqlsrv_num_rows(sqlsrv_query($conn, "SELECT answer FROM skillSurveyAs WHERE studentId = id AND surveyNo = 1")) == 0) {
-  $serveyNum = 1;
-}
 else {
-  $serveyNum = 4;
+  $serveyNum = 1;
 }
 
 if ($serveyNum != 4) {
