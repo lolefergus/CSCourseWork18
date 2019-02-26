@@ -16,8 +16,8 @@
             $question = $row['question'];
             echo'
             <tr>
-              <th scope="col">'$question'</th>
-              <th scope="col" hidden>'$id'</th>
+              <th scope="col">' . $question . '</th>
+              <th scope="col" hidden>'. $id . '</th>
               <th scope="col">
 
                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
