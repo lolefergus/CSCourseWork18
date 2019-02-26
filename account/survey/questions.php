@@ -5,7 +5,7 @@
       <div class="row masonry cols-xs-space cols-sm-space cols-md-space" style="position: relative;">
         <?php
         for ($section=0; $section < 8; $section++) {
-          $Query = sqlsrv_query($conn, "SELECT id, question FROM skillSurveyQs WHERE section = $section")
+          $Query = sqlsrv_query($conn, "SELECT id, question FROM skillSurveyQs WHERE section = $section");
           echo'
           <table class="table">
             <tbody>
