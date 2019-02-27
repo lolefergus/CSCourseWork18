@@ -5,14 +5,14 @@
       <div class="row masonry cols-xs-space cols-sm-space cols-md-space" style="position: relative;">
         <?php
         for ($section=0; $section < 8; $section++) {
-          $Query = sqlsrv_query($conn, "SELECT id, question FROM skillSurveyQs WHERE section = $section");
+          $Query = sqlsrv_query($conn, "SELECT qid, question FROM skillSurveyQs WHERE section = $section");
           echo'
           <table class="table">
             <tbody>
           ';
           while ($row = sqlsrv_fetch_array($Query))
           {
-            $id = $row['id'];
+            $id = $row['qid'];
             $question = $row['question'];
             echo'
             <tr>
