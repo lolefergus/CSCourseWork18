@@ -8,7 +8,7 @@
           $Query = sqlsrv_query($conn, "SELECT qid, question FROM skillSurveyQs WHERE section = $section");
           echo'
           <div>
-          <table class="table">
+          <table class="table table-striped">
             <tbody>
           ';
           while ($row = sqlsrv_fetch_array($Query))
