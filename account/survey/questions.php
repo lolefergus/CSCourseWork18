@@ -12,7 +12,7 @@
           ';
           while ($row = sqlsrv_fetch_array($Query))
           {
-            $id = $row['qid'];
+            $qid = $row['qid'];
             $question = $row['question'];
             echo'
             <tr>
