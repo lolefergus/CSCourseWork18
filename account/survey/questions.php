@@ -7,15 +7,14 @@
         for ($section=0; $section < 8; $section++) {
           $Query = sqlsrv_query($conn, "SELECT qid, question FROM skillSurveyQs WHERE section = $section");
           echo'
-
+          <table class="table">
+            <tbody>
           ';
           while ($row = sqlsrv_fetch_array($Query))
           {
             $qid = $row['qid'];
             $question = $row['question'];
             echo'
-            <table class="table">
-              <tbody>
             <tr>
               <th scope="col">' . $question . '</th>
               <th scope="col" hidden>'. $id . '</th>
@@ -35,12 +34,11 @@
 
               </th>
             </tr>
-            </tbody>
-          </table>
             ';
           }
           echo'
-
+            </tbody>
+          </table>
           ';
         }
 
