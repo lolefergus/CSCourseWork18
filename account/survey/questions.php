@@ -22,13 +22,13 @@
 
                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
                   <label class="btn btn-secondary active">
-                    <input type="radio" name="1" id="option1" autocomplete="off" style="color:#599A90">
+                    <input type="radio" name="1" id="option1" autocomplete="off" style="backgroundcolor:#599A90">
                   </label>
                   <label class="btn btn-secondary">
-                    <input type="radio" name="2" id="option2" autocomplete="off" style="color:#CB5F2B">
+                    <input type="radio" name="2" id="option2" autocomplete="off" style="backgroundcolor:#CB5F2B">
                   </label>
                   <label class="btn btn-secondary">
-                    <input type="radio" name="3" id="option3" autocomplete="off" style="color:#9E264B">
+                    <input type="radio" name="3" id="option3" autocomplete="off" style="backgroundcolor:#9E264B">
                   </label>
                 </div>
 
