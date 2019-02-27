@@ -7,6 +7,7 @@
         for ($section=0; $section < 8; $section++) {
           $Query = sqlsrv_query($conn, "SELECT qid, question FROM skillSurveyQs WHERE section = $section");
           echo'
+          <div>
           <table class="table">
             <tbody>
           ';
@@ -39,6 +40,7 @@
           echo'
             </tbody>
           </table>
+          </div>
           ';
         }
 
