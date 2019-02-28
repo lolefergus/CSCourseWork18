@@ -2,7 +2,7 @@
 
   <div class="slice sct-color-1" style="padding-top: 20px; padding-bottom: 20px;">
     <div class="container container-lg">
-      <div class="row masonry cols-xs-space cols-sm-space cols-md-space" style="position: relative;">
+      <!-- <div class="row masonry cols-xs-space cols-sm-space cols-md-space" style="position: relative;"> -->
         <div>
           <table class="table table-hover">
             <?php
@@ -56,7 +56,7 @@
             ?>
           </table>
         </div>
-      </div>
+      <!-- </div> -->
     </div>
 
   </section>
