@@ -32,17 +32,17 @@
                 echo'
                 <tr>
                   <td scope="row">Do I - ' . $question . '?</td>
-                  <td scope="row" hidden>'. $id . '</td>
+                  <td scope="row" hidden>'. $qid . '</td>
                   <td scope="row">
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
                       <label class="btn btn-success active">
-                        <input type="radio" name="1" id="option1" autocomplete="off"> Usually
+                        <input type="radio" name="Question '.$qid.' 1" id="'$qid.'1" autocomplete="off"> Usually
                       </label>
                       <label class="btn btn-warning">
-                        <input type="radio" name="2" id="option2" autocomplete="off"> Sometimes
+                        <input type="radio" name="Question '.$qid.' 2" id="'$qid.'2" autocomplete="off"> Sometimes
                       </label>
                       <label class="btn btn-danger">
-                        <input type="radio" name="3" id="option3" autocomplete="off"> Rarely
+                        <input type="radio" name="Question '.$qid.' 3" id="'$qid.'3" autocomplete="off"> Rarely
                       </label>
                     </div>
                   </td>
