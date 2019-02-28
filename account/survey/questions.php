@@ -22,10 +22,10 @@
               echo'
               <tbody>
                 <tr>
-                  <th scope="col">'.$title.'</th>
+                  <th scope="col" colspan="2">'.$title.'</th>
                 </tr>
                 <tr>
-                  <th scope="col">'.$description.'</th>
+                  <th scope="col" colspan="2">'.$description.'</th>
                 </tr>
               ';
               while ($row = sqlsrv_fetch_array($Query)) //loops for each question withing section
