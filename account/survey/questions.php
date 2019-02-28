@@ -35,13 +35,13 @@
                   <td scope="row" hidden>'. $id . '</td>
                   <td scope="row">
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                      <label class="btn btn-secondary active" style="backgroundcolor:#599A90">
+                      <label class="btn btn-success active">
                         <input type="radio" name="1" id="option1" autocomplete="off">
                       </label>
-                      <label class="btn btn-secondary" style="backgroundcolor:#CB5F2B">
+                      <label class="btn btn-warning">
                         <input type="radio" name="2" id="option2" autocomplete="off">
                       </label>
-                      <label class="btn btn-secondary" style="backgroundcolor:#9E264B">
+                      <label class="btn btn-danger">
                         <input type="radio" name="3" id="option3" autocomplete="off">
                       </label>
                     </div>
