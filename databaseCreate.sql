@@ -22,13 +22,14 @@ CREATE TABLE accounts (
 );
 
 CREATE TABLE skillSurveyQs (
-    qId int NOT NULL IDENTITY,
+    qId int NOT NULL IDENTITY PRIMARY KEY,
     question nvarchar(200) NOT NULL,
     sectionId int NOT NULL FOREIGN KEY REFERENCES surveySection(surveyId)
 );
 
 CREATE TABLE surveySection (
-    SectionId int NOT NULL IDENTITY,
+    sectionId int NOT NULL IDENTITY PRIMARY KEY,
+    title nvarchar(50) NOT NULL,
     description nvarchar(200) NOT NULL
 );
 
