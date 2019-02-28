@@ -20,14 +20,14 @@
           echo'
           <div>
           <table class="table table-hover">
-            <thead>
+            <tbody>
               <tr>
                 <th scope="col">'.$title.'</th>
               </tr>
               <tr>
                 <th scope="col">'.$description.'</th>
               </tr>
-            </thead>
+            </tbody>
 
             <tbody>
 
