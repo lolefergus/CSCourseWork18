@@ -21,7 +21,7 @@
 
               echo'
               <tbody>
-                <tr>
+                <tr class="table-active">
                   <th scope="col" colspan="2"><b>'.$title.'</b> - '.$description.'</th>
                 </tr>
               ';
