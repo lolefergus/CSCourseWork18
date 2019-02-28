@@ -38,9 +38,9 @@
             $question = $row['question'];
             echo'
             <tr>
-              <th scope="row">' . $question . '</th>
-              <th scope="row" hidden>'. $id . '</th>
-              <th scope="row">
+              <td scope="row">' . $question . '</td>
+              <td scope="row" hidden>'. $id . '</td>
+              <td scope="row">
 
                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
                   <label class="btn btn-secondary active">
@@ -54,7 +54,7 @@
                   </label>
                 </div>
 
-              </th>
+              </td>
             </tr>
             ';
           }
