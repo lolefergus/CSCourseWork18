@@ -5,11 +5,22 @@
       <div class="row masonry cols-xs-space cols-sm-space cols-md-space" style="position: relative;">
         <?php
         for ($section=0; $section < 8; $section++) {
-          $Query = sqlsrv_query($conn, "SELECT qid, question FROM skillSurveyQs WHERE section = $section");
+          $Query = sqlsrv_query($conn, "SELECT skillSurveyQs.qid, skillSurveyQs.question FROM skillSurveyQs WHERE section = $section UNION SELECT surveySection.title, surveySection.description FROM surveySection WHERE sectionId = $section");
+          $title = $row['title'];
+          $description = $row['description'];
+
           echo'
           <div>
           <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">'.$title.'</th>
+                <th scope="col">'.$description.'</th>
+              </tr>
+            </thead>
+
             <tbody>
+
           ';
           while ($row = sqlsrv_fetch_array($Query))
           {
