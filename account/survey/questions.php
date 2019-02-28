@@ -13,8 +13,9 @@
           $section = $currentSection['section'];
           $Query = sqlsrv_query($conn, "SELECT qid, question FROM skillSurveyQs WHERE section = $section"); //selects questions
           $headingQuery = sqlsrv_query($conn, "SELECT title, description FROM surveySection WHERE sectionId = $section"); //selects tile info
-          $title = $headingQuery['title']; //defines title of current section from query results
-          $description = $headingQuery['description']; //as above but for section description
+          $headerInfo = sqlsrv_fetch_array($headingQuery)
+          $title = $headerInfo['title']; //defines title of current section from query results
+          $description = $headerInfo['description']; //as above but for section description
 
           echo'
           <div>
