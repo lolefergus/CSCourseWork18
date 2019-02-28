@@ -22,9 +22,6 @@
               echo'
               <tbody>
                 <tr>
-                  <th scope="col" colspan="2">''</th>
-                </tr>
-                <tr>
                   <th scope="col" colspan="2"><b>'.$title.'</b> - '.$description.'</th>
                 </tr>
               ';
