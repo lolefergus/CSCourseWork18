@@ -36,13 +36,13 @@
                   <td scope="row">
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
                       <label class="btn btn-success active">
-                        <input type="radio" name="1" id="option1" autocomplete="off">
+                        <input type="radio" name="1" id="option1" autocomplete="off"> Usually
                       </label>
                       <label class="btn btn-warning">
-                        <input type="radio" name="2" id="option2" autocomplete="off">
+                        <input type="radio" name="2" id="option2" autocomplete="off"> Sometimes
                       </label>
                       <label class="btn btn-danger">
-                        <input type="radio" name="3" id="option3" autocomplete="off">
+                        <input type="radio" name="3" id="option3" autocomplete="off"> Rarely
                       </label>
                     </div>
                   </td>
