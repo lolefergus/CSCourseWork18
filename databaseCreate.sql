@@ -24,7 +24,7 @@ CREATE TABLE accounts (
 CREATE TABLE skillSurveyQs (
     qId int NOT NULL IDENTITY PRIMARY KEY,
     question nvarchar(200) NOT NULL,
-    sectionId int NOT NULL FOREIGN KEY REFERENCES surveySection(surveyId)
+    section int NOT NULL FOREIGN KEY REFERENCES surveySection(surveyId)
 );
 
 CREATE TABLE surveySection (

@@ -4,11 +4,17 @@
     <div class="container container-lg">
       <div class="row masonry cols-xs-space cols-sm-space cols-md-space" style="position: relative;">
         <?php
-        for ($section=0; $section < 8; $section++) {
-          $Query = sqlsrv_query($conn, "SELECT qid, question FROM skillSurveyQs WHERE section = $section");
-          $headingQuery = sqlsrv_query($conn, "SELECT title, description FROM surveySection WHERE sectionId = $section");
-          $title = $headingQuery['title'];
-          $description = $headingQuery['description'];
+        //as section is a foreign key dynamicly asigned when creating a section in the surveySection table it may not go up as 1,2,3
+        //therfore I must first check which numbers are used as section IDs
+        $NumSectionsQuery = sqlsrv_query($conn, "SELECT DISTINCT section FROM skillSurveyQs"); //selects one of each differnt value in section column of table
+        while ($currentSection = sqlsrv_fetch_array($NumSectionsQuery)) //loops for each section
+        {
+          //reads currecnt section
+          $section = $currentSection['section'];
+          $Query = sqlsrv_query($conn, "SELECT qid, question FROM skillSurveyQs WHERE section = $section"); //selects questions
+          $headingQuery = sqlsrv_query($conn, "SELECT title, description FROM surveySection WHERE sectionId = $section"); //selects tile info
+          $title = $headingQuery['title']; //defines title of current section from query results
+          $description = $headingQuery['description']; //as above but for section description
 
           echo'
           <div>
@@ -23,7 +29,7 @@
             <tbody>
 
           ';
-          while ($row = sqlsrv_fetch_array($Query))
+          while ($row = sqlsrv_fetch_array($Query)) //loops for each question withing section
           {
             $qid = $row['qid'];
             $question = $row['question'];
@@ -55,7 +61,7 @@
           </div>
           ';
         }
-
+        }
         ?>
       </div>
     </div>
