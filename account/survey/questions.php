@@ -19,7 +19,7 @@
 
           echo'
           <div>
-          <table class="table table-striped">
+          <table class="table table-striped table-hover">
             <thead>
               <tr>
                 <th scope="col">'.$title.'</th>
@@ -38,9 +38,9 @@
             $question = $row['question'];
             echo'
             <tr>
-              <th scope="col">' . $question . '</th>
-              <th scope="col" hidden>'. $id . '</th>
-              <th scope="col">
+              <th scope="row">' . $question . '</th>
+              <th scope="row" hidden>'. $id . '</th>
+              <th scope="row">
 
                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
                   <label class="btn btn-secondary active">
