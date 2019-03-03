@@ -4,7 +4,7 @@
     <div class="container container-lg">
       <!-- <div class="row masonry cols-xs-space cols-sm-space cols-md-space" style="position: relative;"> -->
         <div>
-          <form id="skillSurvey" action="" method="post">
+          <form id="skillSurvey" action="/account/survey/processing.php" method="post">
             <table class="table table-hover">
               <?php
               //as section is a foreign key dynamicly asigned when creating a section in the surveySection table it may not go up as 1,2,3
