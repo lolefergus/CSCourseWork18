@@ -56,6 +56,7 @@
               }
               ?>
             </table>
+            <input type="hidden" name="test" value="eswgfewg">
             <input type="hidden" name="SubmitCheck" value="sent">
             <input class="btn btn-submit" type="submit">
           </form>
