@@ -10,7 +10,7 @@
 <?php
 //checks survey has been submited
 if (isset($_POST['SubmitCheck'])) {
-  $Query = sqlsrv_query($conn, "SELECT id FROM skillSurveyQs");
+  $Query = sqlsrv_query($conn, "SELECT qid FROM skillSurveyQs");
   while ($row = sqlsrv_fetch_array($Query)) {
     $qid = $row['qid'];
     $answer = $_POST['Question '.$qid];
