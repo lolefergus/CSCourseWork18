@@ -18,7 +18,7 @@ if (isset($_POST['submit'])) {
   }
 }
 else {
-  // code...
+print "Nope";
 }
 
 ?>
