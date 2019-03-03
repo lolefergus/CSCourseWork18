@@ -37,13 +37,13 @@
                     <td scope="row">
                       <div class="btn-group btn-group-toggle" data-toggle="buttons">
                         <label class="btn btn-success">
-                          <input type="radio" name="Question '.$qid.'" id="1" autocomplete="off"> Usually
+                          Question '.$qid.': <input type="radio" name="Question '.$qid.'" id="1" autocomplete="off"> Usually
                         </label>
                         <label class="btn btn-warning">
-                          <input type="radio" name="Question '.$qid.'" id="2" autocomplete="off"> Sometimes
+                          Question '.$qid.': <input type="radio" name="Question '.$qid.'" id="2" autocomplete="off"> Sometimes
                         </label>
                         <label class="btn btn-danger">
-                          <input type="radio" name="Question '.$qid.'" id="3" autocomplete="off"> Rarely
+                          Question '.$qid.': <input type="radio" name="Question '.$qid.'" id="3" autocomplete="off"> Rarely
                         </label>
                       </div>
                     </td>
