@@ -13,6 +13,7 @@ if (isset($_POST['SubmitCheck'])) {
   $Query = sqlsrv_query($conn, "SELECT qid FROM skillSurveyQs");
   while ($row = sqlsrv_fetch_array($Query)) {
     $qid = $row['qid'];
+    print $_POST['1'];
     $answer = $_POST['Question '.$qid.''];
     print $answer;
   }
