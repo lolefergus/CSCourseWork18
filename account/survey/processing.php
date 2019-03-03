@@ -15,7 +15,8 @@ if (isset($_POST['SubmitCheck'])) {
   //   $qid = $row['qid'];
   //   $answer = $_POST['Question'.$qid.''];
   //   print $answer;
-  echo $_POST['test'];
+  $weee = $_POST['test'];
+  echo $weee;
   }
 }
 else {
