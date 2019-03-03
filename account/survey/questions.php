@@ -56,7 +56,7 @@
               }
               ?>
             </table>
-            <input class="hidden autocomplete" type="button" name="submit" >
+            <input type="hidden" name="SubmitCheck" value="sent">
             <input class="btn btn-submit" type="submit">
           </form>
         </div>
