@@ -30,6 +30,7 @@ include($root.'/includes/connect.php');
 
       sqlsrv_query($conn, "INSERT INTO accounts (firstName, lastName, password, email, accountType, joinYear, region, workOrSchool) values ($firstName, $lastName, $password, $email, $accountType, $joinYear, $region, $workOrSchool) ");
       // echo '<script>window.location.href="/account/index.php";</script>';
+      echo "Executed Query";
     }
     else {
       print "not running porcessing";
