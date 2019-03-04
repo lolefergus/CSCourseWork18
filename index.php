@@ -52,7 +52,7 @@
                   <div class="card-body">
                     <h5 class="card-title" name="title">'.$title.'</h5>
                     <p class="card-text" name="body" style="min-height:220px;">'.$cutBody.'...</p>
-                    <a href="/news/view/index.php/?id='.$id.'" class="btn btn-primary">Click to continue reading</a>
+                    <a href="/news/view/index.php/?id='.$id.'" class="btn btn-styled btn-base-1 btn-circle">Click to continue reading</a>
                   </div>
                 </div>
                 ';
@@ -70,7 +70,7 @@
               <div class="col-8 my-3">
                 <div class="row py-5">
                   <div class="col-12">
-                    <a href="/news/index.php" class="btn btn-primary">Click to see all Articles</a>
+                    <a href="/news/index.php" class="btn btn-styled btn-base-1 btn-circle">Click to see all Articles</a>
                     <span class="clearfix"></span>
                   </div>
                 </div>
