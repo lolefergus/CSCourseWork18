@@ -40,7 +40,7 @@ include($root.'/includes/connect.php');
       <p>'.$workOrSchool.'</p>
       <p>'.$joinYear.'</p>
       <p>'.$accountType.'</p>
-      "
+      ";
     }
     else {
       print "not running porcessing";
