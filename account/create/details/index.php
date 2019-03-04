@@ -32,8 +32,6 @@ include($root.'/includes/connect.php');
       echo '<script>window.location.href="/admin/news/index.php";</script>';
     }
 
-    else
-    {
       $accountType = $_GET['type'];
       ?>
 
@@ -156,7 +154,6 @@ include($root.'/includes/connect.php');
       <?php
       include($root.'/includes/footer.php');
       ?>
-    }
 
   </main>
 
