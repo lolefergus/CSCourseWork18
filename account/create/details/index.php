@@ -35,7 +35,7 @@ include($root.'/includes/connect.php');
       print "not running porcessing";
     }
 
-      $accountType = $_ GET['type'];
+      $accountType = $_GET['type'];
       ?>
 
       <container>
