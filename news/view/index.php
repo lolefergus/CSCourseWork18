@@ -8,7 +8,7 @@ include($root.'/includes/connect.php');
 
 //sources title
 $id = $_GET['id'];
-$Query = sqlsrv_query($conn,"SELECT news, accounts.firstName, accounts.lastName FROM news WHERE id = $id AND news.authorId = accounts.authorId");
+$Query = sqlsrv_query($conn,"SELECT news.title, news.body, news.image, accounts.firstName, accounts.lastName FROM news WHERE id = $id AND news.authorId = accounts.id");
 $row = sqlsrv_fetch_array($Query);
 $title = $row['title'];
 
