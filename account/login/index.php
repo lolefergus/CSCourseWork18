@@ -95,7 +95,7 @@ include($root.'/includes/head.php');
         <div class="container container-lg">
           <div class="row align-items-center cols-xs-space cols-sm-space cols-md-space">
             <div class="col-lg-6">
-              <form class="form-default form-material" method="post">
+              <form class="form-default form-material" id="login" action="" method="post">
 
                 <div class="row col-12">
                   <h3>Login</h3>
@@ -111,9 +111,9 @@ include($root.'/includes/head.php');
                 }
                  ?>
 
-                <div class="row">
-                  <div class="col-12">
-                      <div class="form-group has-floating-label">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="form-group has-floating-label">
                           <label class="control-label">Email</label>
                           <input name="email" type="text" class="form-control form-control-lg" required="true" placeholder="">
                           <span class="bar"></span>
@@ -148,6 +148,7 @@ include($root.'/includes/head.php');
                       </div>
 
                     </div>
+
                   </form>
                 </div>
               </div>
