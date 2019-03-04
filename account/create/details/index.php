@@ -17,7 +17,7 @@ include($root.'/includes/connect.php');
     <?php
 
 
-    if (isset($_POST['firstName']))
+    if (isset($_POST['SubmitCheck']))
     {
       $firstName = $_POST['firstName'];
       $lastName = $_POST['lastName'];
@@ -134,6 +134,7 @@ include($root.'/includes/connect.php');
 
                     <div class="col-lg-3 col-md-4">
                       <div class="mt-4">
+                        <input type="hidden" name="SubmitCheck" value="sent">
                         <input type="hidden" name="accountType" value="<?php echo $accountType?>">
                         <input type="submit" class="btn btn-styled btn-base-1 btn-circle" name="create">
                       </div>
