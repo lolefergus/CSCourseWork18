@@ -28,22 +28,8 @@ include($root.'/includes/connect.php');
       $joinYear = (string)date("Y");
       $accountType = $_POST['accountType'];
 
-      sqlsrv_query($conn, "INSERT INTO accounts (firstName, lastName, password, email, accountType, joinYear, region, workOrSchool) values ($firstName, $lastName, $password, $email, $accountType, $joinYear, $region, $workOrSchool) ");
+      sqlsrv_query($conn, "INSERT INTO accounts (firstName, lastName, saltedPassword, email, accountType, joinYear, region, workOrSchool) values ($firstName, $lastName, $password, $email, $accountType, $joinYear, $region, $workOrSchool) ");
       // echo '<script>window.location.href="/account/index.php";</script>';
-      echo "Executed Query:";
-      echo
-      "
-      <p>'.$firstName.' '.$lastName.'</p>
-      <p>'.$email.'</p>
-      <p>'.$password.'</p>
-      <p>'.$region.'</p>
-      <p>'.$workOrSchool.'</p>
-      <p>'.$joinYear.'</p>
-      <p>'.$accountType.'</p>
-      ";
-    }
-    else {
-      print "not running porcessing";
     }
 
       $accountType = $_GET['type'];
