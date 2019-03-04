@@ -45,9 +45,9 @@ include($root.'/includes/connect.php');
             <div class="row align-items-center cols-xs-space cols-sm-space cols-md-space">
               <div class="col-lg-6">
                 <form class="form-default form-material">
-                  
-                  <input type="hidden" name="SubmitCheck" value="sent">
-                  <input type="hidden" name="accountType" value="<?php echo $accountType?>">
+
+                  <!-- <input type="hidden" name="SubmitCheck" value="sent">
+                  <input type="hidden" name="accountType" value="<?php echo $accountType?>"> -->
 
                   <div class="row col-12">
                     <h3>Register for the Program</h3>
