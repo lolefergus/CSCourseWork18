@@ -122,7 +122,7 @@ include($root.'/includes/connect.php');
                       <div class="col-12">
                         <div class="form-group has-floating-label">
                           <label class="control-label">Enter the Name of the Company You Work For</label>
-                          <input type="password" class="form-control form-control-lg" placeholder="">
+                          <input type="text" class="form-control form-control-lg" placeholder="">
                           <span class="bar"></span>
                         </div>
                       </div>
