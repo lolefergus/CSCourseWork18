@@ -15,7 +15,7 @@ include($root.'/includes/connect.php');
 
 
     <?php
-    $accountType = $_GET['type'];
+    $accountType = $_POST['accountType'];
 
     if (isset($_POST['create']))
     {
