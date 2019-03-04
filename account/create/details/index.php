@@ -129,7 +129,7 @@ include($root.'/includes/connect.php');
 
                   <div class="col-lg-3 col-md-4">
                     <div class="mt-4">
-                      <input type="submit" class="btn btn-styled btn-base-1 btn-circle" name="<?php $accountType ?>">
+                      <input type="submit" class="btn btn-styled btn-base-1 btn-circle" name="<?php echo $accountType; ?>">
                     </div>
                   </div>
 
