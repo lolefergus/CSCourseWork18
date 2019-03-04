@@ -17,7 +17,7 @@ include($root.'/includes/connect.php');
     <?php
 
 
-    if (isset($_POST['create']))
+    if (isset($_POST['accountType']))
     {
       $firstName = $_POST['firstName'];
       $lastName = $_POST['lastName'];
