@@ -33,7 +33,7 @@ include($root.'/includes/connect.php');
       echo "Executed Query:";
       echo
       "
-      <p>'.$firstName." ".$lastName.'</p>
+      <p>'.$firstName.' '.$lastName.'</p>
       <p>'.$email.'</p>
       <p>'.$password.'</p>
       <p>'.$region.'</p>
