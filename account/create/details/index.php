@@ -57,7 +57,7 @@ include($root.'/includes/connect.php');
                     <div class="col-md-6 ml-lg-auto">
                       <div class="form-group has-floating-label">
                         <label class="control-label">Forename</label>
-                        <input type="text" class="form-control form-control-lg" placeholder="">
+                        <input type="text" class="form-control form-control-lg" name="firstName">
                         <span class="bar"></span>
                       </div>
                     </div>
@@ -65,7 +65,7 @@ include($root.'/includes/connect.php');
                     <div class="col-md-6 ml-lg-auto">
                       <div class="form-group has-floating-label">
                         <label class="control-label">Surname</label>
-                        <input type="text" class="form-control form-control-lg" placeholder="">
+                        <input type="text" class="form-control form-control-lg" name="lastName">
                         <span class="bar"></span>
                       </div>
                     </div>
@@ -75,7 +75,7 @@ include($root.'/includes/connect.php');
                     <div class="col-12">
                       <div class="form-group has-floating-label">
                         <label class="control-label">Email</label>
-                        <input type="text" class="form-control form-control-lg" placeholder="">
+                        <input type="text" class="form-control form-control-lg" name="email">
                         <span class="bar"></span>
                       </div>
                     </div>
@@ -85,7 +85,7 @@ include($root.'/includes/connect.php');
                     <div class="col-12">
                       <div class="form-group has-floating-label">
                         <label class="control-label">Password</label>
-                        <input type="password" class="form-control form-control-lg" placeholder="">
+                        <input type="password" class="form-control form-control-lg" name="password">
                         <span class="bar"></span>
                       </div>
                     </div>
@@ -98,7 +98,7 @@ include($root.'/includes/connect.php');
                     else {
                       echo '<label>Select the Region of the Island You Work In:</label>';
                     } ?>
-                    <select class="form-control selectpicker select2-hidden-accessible" data-minimum-results-for-search="Infinity" tabindex="-1" aria-hidden="true">
+                    <select class="form-control selectpicker select2-hidden-accessible" name="region" data-minimum-results-for-search="Infinity" tabindex="-1" aria-hidden="true">
                       <option value="North">North</option>
                       <option value="Center">Centre</option>
                       <option value="South">South</option>
@@ -109,7 +109,7 @@ include($root.'/includes/connect.php');
                     echo '
                     <div class="form-group">
                       <label class="control-label">Enter the Name of the School You Attend</label>
-                      <select class="form-control selectpicker select2-hidden-accessible" data-minimum-results-for-search="Infinity" tabindex="-1" aria-hidden="true">
+                      <select class="form-control selectpicker select2-hidden-accessible" name="workOrSchool" data-minimum-results-for-search="Infinity" tabindex="-1" aria-hidden="true">
                         <option value="RGS">Ramsey Grammar School</option>
                         <option value="CRHS">Castle Rushen High School</option>
                         <option value="QEII">Queen Elizabeth II High School</option>
@@ -125,7 +125,7 @@ include($root.'/includes/connect.php');
                       <div class="col-12">
                         <div class="form-group has-floating-label">
                           <label class="control-label">Enter the Name of the Company You Work For</label>
-                          <input type="text" class="form-control form-control-lg" placeholder="">
+                          <input type="text" class="form-control form-control-lg" name="workOrSchool">
                           <span class="bar"></span>
                         </div>
                       </div>
