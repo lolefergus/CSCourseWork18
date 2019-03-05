@@ -31,7 +31,7 @@ include($root.'/includes/connect.php');
       //checks for existing account with same Email
       $Query = sqlsrv_query($conn, "SELECT email FROM accounts WHERE email = $email", array(), array('Scrollable' => 'buffered'));
       $count = sqlsrv_num_rows($Query);
-      if (sqlsrv_num_rows($Query)) {
+      if ($count > 0) {
         print "<h5>This account aleady exists</h5>";
       }
       else {
