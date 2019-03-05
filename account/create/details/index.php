@@ -25,7 +25,7 @@ include($root.'/includes/connect.php');
       $password = password_hash ( $_POST['password'], PASSWORD_BCRYPT); //hashes password
       $region = $_POST['region'];
       $workOrSchool = $_POST['workOrSchool'];
-      $joinYear = (string)date("Y");
+      $joinYear = (integer)date("Y");
       $accountType = $_POST['accountType'];
 
       sqlsrv_query($conn, "INSERT INTO accounts (firstName, lastName, saltedPassword, email, accountType, joinYear, region, workOrSchool) values ($firstName, $lastName, $password, $email, $accountType, $joinYear, $region, $workOrSchool) ");
