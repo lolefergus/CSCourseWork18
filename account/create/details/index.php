@@ -35,7 +35,7 @@ include($root.'/includes/connect.php');
       }
       else {
         print "Executed Query";
-        $insert = sqlsrv_query($conn, "INSERT INTO accounts (firstName, lastName, saltedPassword, email, accountType, joinYear, region, workOrSchool) values ('Wee', 'Hee', 'y$10\$swtk4gp1Bt1DjWcZZnPNSeM3lNSmyfRLBCu74lieBCX8DZLdY8ou6', 'example@gmail.com', 'Student', 2019, 'Center', 'Wewewwew') ");
+        $insert = sqlsrv_query($conn, "INSERT INTO accounts (firstName, lastName, saltedPassword, email, accountType, joinYear, region, workOrSchool) values ($firstName, $lastName, $password, $email, $accountType, $joinYear, $region, $workOrSchool) ");
         // echo '<script>window.location.href="/account/index.php";</script>';
         if( ($errors = sqlsrv_errors() ) != null) {
         foreach( $errors as $error ) {
