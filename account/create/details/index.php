@@ -34,6 +34,14 @@ include($root.'/includes/connect.php');
         print "<h5>This account aleady exists</h5>";
       }
       else {
+        for ($letter=0; $letter < strlen ($password); $letter++) {
+          $char = substr ($password, $letter, -1);
+          if ($char = a) //if char is = to special character
+          {
+            $$escapedPassword = "\" . $char;
+          }
+        }
+
         print "Executed Query";
         $insert = sqlsrv_query($conn, "INSERT INTO accounts (firstName, lastName, saltedPassword, email, accountType, joinYear, region, workOrSchool) values ($firstName, $lastName, $password, $email, $accountType, $joinYear, $region, $workOrSchool) ");
         // echo '<script>window.location.href="/account/index.php";</script>';
