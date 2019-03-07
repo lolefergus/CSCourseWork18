@@ -38,7 +38,7 @@ include($root.'/includes/connect.php');
           $char = substr ($password, $letter, -1);
           if ($char = "$") //if char is = to special character
           {
-            $$escapedPassword = "\" . $char;
+            $$escapedPassword = "\\" . $char;
           }
         }
 
