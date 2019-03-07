@@ -59,6 +59,10 @@ include($root.'/includes/connect.php');
           }
         }
       }
+      else
+      {
+        echo "Please enter a valid email";
+      }
     }
     $accountType = $_GET['type'];
     ?>
