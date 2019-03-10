@@ -52,11 +52,11 @@ include($root.'/includes/connect.php');
           {
             if ($passwordArray[$letter] == "$") //if char is == to special character
             {
-              $escapedPassword .= '\\' . $char;
+              $escapedPassword .= '\\' . $passwordArray[$letter];
             }
             else
             {
-              $escapedPassword .= $char;
+              $escapedPassword .= $passwordArray[$letter];
             }
 
           }
