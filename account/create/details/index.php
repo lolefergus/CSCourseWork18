@@ -39,11 +39,11 @@ include($root.'/includes/connect.php');
         else
         {
           //escapes user inputed values
-          $escapedFirstName = PDO::quote($firstName);
-          $escapedLastName = PDO::quote($lastName);
-          $escapedEmail = PDO::quote($password);
-          $escapedPassword = PDO::quote($password);
-          $escapedWorkOrSchool = PDO::quote($workOrSchool);
+          $escapedFirstName -> quote($firstName);
+          $escapedLastName -> quote($lastName);
+          $escapedEmail -> quote($password);
+          $escapedPassword -> quote($password);
+          $escapedWorkOrSchool -> quote($workOrSchool);
 
           print "Executed Query";
           $insert = sqlsrv_query($conn, "INSERT INTO accounts (firstName, lastName, saltedPassword, email, accountType, joinYear, region, workOrSchool) values ($firstName, $lastName, $escapedPassword, $email, $accountType, $joinYear, $region, $workOrSchool) ");
