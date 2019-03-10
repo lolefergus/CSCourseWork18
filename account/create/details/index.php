@@ -46,7 +46,7 @@ include($root.'/includes/connect.php');
           $escapedWorkOrSchool = addslashes($workOrSchool);
 
           print "Executed Query";
-          $insert = sqlsrv_query($conn, "INSERT INTO accounts (firstName, lastName, saltedPassword, email, accountType, joinYear, region, workOrSchool) values ($firstName, $lastName, $escapedPassword, $email, $accountType, $joinYear, $region, $workOrSchool) ");
+          $insert = sqlsrv_query($conn, "INSERT INTO accounts (firstName, lastName, saltedPassword, email, accountType, joinYear, region, workOrSchool) values ($escapedFirstName, $escapedLastName, $escapedPassword, $escapedEmail, $accountType, $joinYear, $region, $escapedWorkOrSchool) ");
           // echo '<script>window.location.href="/account/index.php";</script>';
           if( ($errors = sqlsrv_errors() ) != null) {
             foreach( $errors as $error ) {
