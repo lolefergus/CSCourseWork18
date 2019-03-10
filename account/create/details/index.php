@@ -49,7 +49,7 @@ include($root.'/includes/connect.php');
           $escapedPassword = "";
           for ($letter=0; $letter < strlen ($s1Password); $letter++) {
             $char = substr ($s1Password, $letter, -1);
-            if ($char = "$") //if char is = to special character
+            if ($char == "$") //if char is = to special character
             {
               $escapedPassword .= '\\' . $char;
             }
