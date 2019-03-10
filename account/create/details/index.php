@@ -38,12 +38,26 @@ include($root.'/includes/connect.php');
         }
         else
         {
-          //escapes user inputed values
+          //escapes user inputed values with " ' \
           $escapedFirstName = addslashes($firstName);
           $escapedLastName = addslashes($lastName);
           $escapedEmail = addslashes($password);
-          $escapedPassword = addslashes($password);
+          $s1Password = addslashes($password);
           $escapedWorkOrSchool = addslashes($workOrSchool);
+
+          //escapes $
+          $escapedPassword = "";
+          for ($letter=0; $letter < strlen ($s1Password); $letter++) {
+            $char = substr ($s1Password, $letter, -1);
+            if ($char = "$") //if char is = to special character
+            {
+              $escapedPassword .= '\\' . $char;
+            }
+            else {
+              $escapedPassword .= $char;
+            }
+
+          }
 
           print $escapedPassword;
           print "Executed Query";
