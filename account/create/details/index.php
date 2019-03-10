@@ -38,13 +38,14 @@ include($root.'/includes/connect.php');
         }
         else
         {
-          $escapedPassword = "";
-          for ($letter=0; $letter < strlen ($password); $letter++) {
-            $char = substr ($password, $letter, -1);
-            if ($char = "$") //if char is = to special character
-            {
-              $$escapedPassword .= '\\' . $char;
-            }
+          //escapes user inputed values
+          $escapedFirstName = PDO::quote($firstName);
+          $escapedLastName = PDO::quote($lastName);
+          $escapedEmail = PDO::quote($password);
+          $escapedPassword = PDO::quote($password);
+          $escapedWorkOrSchool = PDO::quote($workOrSchool);
+
+
           }
 
           print "Executed Query";
