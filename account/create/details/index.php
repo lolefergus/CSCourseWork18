@@ -45,6 +45,7 @@ include($root.'/includes/connect.php');
           $escapedPassword = addslashes($password);
           $escapedWorkOrSchool = addslashes($workOrSchool);
 
+          print $escapedPassword;
           print "Executed Query";
           $insert = sqlsrv_query($conn, "INSERT INTO accounts (firstName, lastName, saltedPassword, email, accountType, joinYear, region, workOrSchool) values ($escapedFirstName, $escapedLastName, $escapedPassword, $escapedEmail, $accountType, $joinYear, $region, $escapedWorkOrSchool) ");
           // echo '<script>window.location.href="/account/index.php";</script>';
