@@ -39,11 +39,11 @@ include($root.'/includes/connect.php');
         else
         {
           //escapes user inputed values
-          $escapedFirstName->quote($firstName);
-          $escapedLastName->quote($lastName);
-          $escapedEmail->quote($password);
-          $escapedPassword->quote($password);
-          $escapedWorkOrSchool->quote($workOrSchool);
+          $escapedFirstName = addslashes($firstName);
+          $escapedLastName = addslashes($lastName);
+          $escapedEmail = addslashes($password);
+          $escapedPassword = addslashes($password);
+          $escapedWorkOrSchool = addslashes($workOrSchool);
 
           print "Executed Query";
           $insert = sqlsrv_query($conn, "INSERT INTO accounts (firstName, lastName, saltedPassword, email, accountType, joinYear, region, workOrSchool) values ($firstName, $lastName, $escapedPassword, $email, $accountType, $joinYear, $region, $workOrSchool) ");
