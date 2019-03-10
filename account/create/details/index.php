@@ -45,9 +45,6 @@ include($root.'/includes/connect.php');
           $escapedPassword = PDO::quote($password);
           $escapedWorkOrSchool = PDO::quote($workOrSchool);
 
-
-          }
-
           print "Executed Query";
           $insert = sqlsrv_query($conn, "INSERT INTO accounts (firstName, lastName, saltedPassword, email, accountType, joinYear, region, workOrSchool) values ($firstName, $lastName, $escapedPassword, $email, $accountType, $joinYear, $region, $workOrSchool) ");
           // echo '<script>window.location.href="/account/index.php";</script>';
