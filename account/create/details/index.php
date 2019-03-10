@@ -47,7 +47,7 @@ include($root.'/includes/connect.php');
 
           //escapes $
           $escapedPassword = "";
-          str_split ($s1Password) : $passwordArray; //splits string into array
+          $passwordArray = str_split ($s1Password); //splits string into array
           for ($letter=0; $letter < strlen ($s1Password); $letter++)
           {
             if ($passwordArray[$letter] == "$") //if char is == to special character
