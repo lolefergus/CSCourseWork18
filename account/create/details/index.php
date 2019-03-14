@@ -29,7 +29,7 @@ include($root.'/includes/connect.php');
       $accountType = $_POST['accountType'];
 
       $escapedEmail = preg_quote ($email);
-      if (print preg_match( "[a-zA-Z0-9_%\+-]+(\.[a-zA-Z0-9_%\+-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z]+)+", $escapedEmail))
+      if (print preg_match( "[a-zA-Z0-9_%\+-]+(\.[a-zA-Z0-9_%\+-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z]+)+", $escapedEmail) == 1)
       {
         //checks for existing account with same Email
         $Query = sqlsrv_query($conn, "SELECT email FROM accounts WHERE email = '$email'");
