@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <?php
-    $root = $_surveR['DOCUMENT_ROOT'];
+    $root = $_SERVER['DOCUMENT_ROOT'];
     $title = "Skill Survey"; //sets page title
     include($root.'/includes/head.php');
     include($root.'/includes/connect.php');
