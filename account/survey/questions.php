@@ -6,6 +6,7 @@
         <div>
           <form id="skillSurvey" action="/account/survey/processing.php" method="post">
             <table class="table table-hover">
+              <input type="hidden" name="surveyNo" value="<?php $surveyNo ?>">
               <?php
               //as section is a foreign key dynamicly asigned when creating a section in the surveySection table it may not go up as 1,2,3
               //therfore I must first check which numbers are used as section IDs
