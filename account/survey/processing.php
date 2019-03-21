@@ -13,12 +13,12 @@
 <?php
 //checks survey has been submited
 if (isset($_POST['SubmitCheck'])) {
-  $surveyNo = $row['surveyNo']; //sets survey number
+  $surveyNo = $_POST['surveyNo']; //sets survey number
   //gets list of all question IDs
   $Query = sqlsrv_query($conn, "SELECT qid FROM skillSurveyQs");
   //loops for each question
-  while ($row = sqlsrv_fetch_array($Query)) {
-    $qid = $row['qid']; //takes question ID from SQL query
+  while ($_POST = sqlsrv_fetch_array($Query)) {
+    $qid = $_POST['qid']; //takes question ID from SQL query
     $answer = $_POST['Question'.$qid.'']; //takes answer from post
     print $answer;
     $saveAnswer = sqlsrv_query($conn, "INSERT INTO skillSurveyAs (studentId, surveyNo, qId, dateCompleted, answer) values ($userId, $surveyNo, $qId, 12-11-2005, $answer)");
