@@ -21,7 +21,7 @@ if (isset($_POST['SubmitCheck'])) {
     $qId = $row['qid']; //takes question ID from SQL query
     $answer = $_POST['Question'.$qId.'']; //takes answer from post
     print $surveyNo;
-    print $qid;
+    print $qId;
     print $answer;
     $saveAnswer = sqlsrv_query($conn, "INSERT INTO skillSurveyAs (studentId, surveyNo, qId, dateCompleted, answer) values ($userId, $surveyNo, $qId, convert(date, getdate()), $answer)");
 
