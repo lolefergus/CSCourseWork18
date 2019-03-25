@@ -53,11 +53,10 @@
                 echo'
                 </tbody>
                 ';
-                print $surveyNo;
               }
               ?>
             </table>
-            <input type="hidden" name="surveyNo" value="<?php $surveyNo ?>">
+            <input type="hidden" name="surveyNo" value="<?php print $surveyNo; ?>">
             <input type="hidden" name="SubmitCheck" value="sent">
             <input class="btn btn-submit" type="submit">
           </form>
