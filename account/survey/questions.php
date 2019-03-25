@@ -53,6 +53,7 @@
                 echo'
                 </tbody>
                 ';
+                print $surveyNo;
               }
               ?>
             </table>
