@@ -21,21 +21,11 @@ if (isset($_POST['SubmitCheck'])) {
     $qId = $row['qid']; //takes question ID from SQL query
     $answer = $_POST['Question'.$qId.'']; //takes answer from post
     $saveAnswer = sqlsrv_query($conn, "INSERT INTO skillSurveyAs (studentId, surveyNo, qId, dateCompleted, answer) values ($userId, $surveyNo, $qId, convert(date, getdate()), $answer)");
-
-
-    //outputs $errors
-    if( ($errors = sqlsrv_errors() ) != null) {
-      foreach( $errors as $error ) {
-        echo "SQLSTATE: ".$error[ 'SQLSTATE']."<br />";
-        echo "code: ".$error[ 'code']."<br />";
-        echo "message: ".$error[ 'message']."<br />";
-      }
-    }
   }
-
+  header("Location:account/");
 }
 else {
-print "Nope";
+print "An Error Has Occurred, Please Try Again";
 }
 
 ?>
