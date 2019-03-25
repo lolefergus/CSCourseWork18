@@ -26,6 +26,7 @@ else {
   $surveyNo = 1;
 }
 
+  print $surveyNo;
 if ($surveyNo != 4) {
   include($root.'/account/survey/questions.php');
 }
