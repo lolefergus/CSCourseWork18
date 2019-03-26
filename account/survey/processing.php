@@ -6,7 +6,7 @@
     $title = "Skill Survey"; //sets page title
     include($root.'/includes/head.php');
     include($root.'/includes/connect.php');
-    include($root.'/includes/navbar.php')
+    include($root.'/includes/navbar.php');
 
     $userId = 1;
 ?>
