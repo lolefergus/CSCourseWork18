@@ -44,11 +44,11 @@ if (print preg_match( "[a-zA-Z0-9_%\+-]+(\.[a-zA-Z0-9_%\+-]+)*@[a-zA-Z0-9-]+(\.[
       {
         print "Succesful"; //REMOVE
         //Start a session
-        if ($_SESSION['active'] != true)
+        if ($_SESSION['active'] !== true)
         {
           print "Session started";
           //Use user's id to identify the session
-          $_SESSION['id']=$id;
+          $_SESSION['id']= $id;
           $_SESSION['active'] = true;
           $_SESSION['last_activity'] = time(); //your last activity was now, having logged in.
           //sends user to account homepage
