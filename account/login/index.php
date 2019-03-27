@@ -135,7 +135,7 @@ include($root.'/includes/head.php');
 
                       <div class="col-lg-3 col-md-4">
                         <div class="mt-4">
-                          <input type="submit" name="login" class="btn btn-styled btn-base-1 btn-circle"> Login
+                          <input type="submit" name="login" class="btn btn-styled btn-base-1 btn-circle" value="Login">
                         </div>
                       </div>
 
