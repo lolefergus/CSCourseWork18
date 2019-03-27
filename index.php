@@ -84,7 +84,5 @@
          ?>
     </main>
 
-<?php include($root.'/includes/scripts.php'); ?>
-
 </body>
 </html>
