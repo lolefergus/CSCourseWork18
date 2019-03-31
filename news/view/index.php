@@ -6,7 +6,7 @@ $root = $_SERVER['DOCUMENT_ROOT'];
 //conects to Database
 include($root.'/includes/connect.php');
 
-//sources title
+//sources title and news article
 $id = $_GET['id'];
 $Query = sqlsrv_query($conn,"SELECT news.title, news.body, news.image, accounts.firstName, accounts.lastName FROM news INNER JOIN accounts ON news.authorId = accounts.id WHERE accounts.id = $id");
 $row = sqlsrv_fetch_array($Query);
@@ -22,10 +22,11 @@ include($root.'/includes/head.php');
     <?php
     include($root.'/includes/navbar.php');
 
+    //sets variables used to output articles
       $title = $row['title'];
       $body = $row['body'];
       $image = $row['image'];
-      $authorId = $row['authorId'];
+      $author = $row['firstName'] . " " . $row['lastName'];
       ?>
 
       <!-- PAGE HEADER -->
@@ -40,7 +41,7 @@ include($root.'/includes/head.php');
                     <?php echo $title; ?>
                   </h1>
                   <p class="heading heading-inverse heading-1 text-normal">
-                    <?php echo '-' . $authorId; ?>
+                    <?php echo '- Writen by ' . $author; ?>
                   </p>
                   <span class="clearfix"></span>
                 </div>
