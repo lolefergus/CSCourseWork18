@@ -11,9 +11,8 @@ include($root.'/includes/connect.php');
   <main class="body-wrap">
     <?php
     include($root.'/includes/navbar.php');
+    ?>
 
-
-    echo'
     <container>
 
       <section class="slice sct-color-1">
@@ -60,8 +59,8 @@ include($root.'/includes/connect.php');
         </div>
       </section>
 
-    </container>';
-    ?>
+    </container>
+
 
     <?php
     include($root.'/includes/footer.php');

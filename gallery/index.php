@@ -39,6 +39,7 @@ include($root.'/includes/connect.php');
 
           <?php
 
+          //selects info needed to display pictures
           $Query = sqlsrv_query($conn,"SELECT * FROM news");
           while ($row = sqlsrv_fetch_array($Query))
           {
@@ -46,6 +47,7 @@ include($root.'/includes/connect.php');
             $title = $row['title'];
             $image = $row['image'];
 
+            //outputs images
             echo
             '
             <div class="masonry-item col-sm-6 col-md-4 design" style="position: relative;">
