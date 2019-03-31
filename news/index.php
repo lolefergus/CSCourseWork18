@@ -11,6 +11,7 @@ include($root.'/includes/connect.php');
 
   <main class="body-wrap">
     <?php
+    //includes navagation bar
     include($root.'/includes/navbar.php')
     ?>
 
@@ -40,18 +41,19 @@ include($root.'/includes/connect.php');
           <div class="row masonry cols-xs-space cols-sm-space cols-md-space" style="position: relative;">
 
             <?php
-
+            //runs SQL query to select all articles from database
             $Query = sqlsrv_query($conn,"SELECT * FROM news");
-            while ($row = sqlsrv_fetch_array($Query))
+            while ($row = sqlsrv_fetch_array($Query)) //iterates through results
             {
               $id = $row['id'];
               $title = $row['title'];
               $body = $row['body'];
               $image = $row['image'];
 
-              // limmits body text displayed
+              // limmits body text displayed to display taster
               $cutbody = substr($body,0,200);
 
+              //displays article info
               echo'
               <div class="masonry-item col-sm-6 col-md-4 design" style="position: absolute;">
                 <div class="card z-depth-3-top border-0">
