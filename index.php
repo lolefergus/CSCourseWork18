@@ -15,6 +15,7 @@
 
           <!-- Latest news -->
           <section class="container " style="padding-top: 20px; padding-bottom: 20px;">
+            <!-- intro to career ready -->
             <div>
               <h3>What is Career Ready?</h3>
             </div>
