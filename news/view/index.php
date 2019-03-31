@@ -40,8 +40,8 @@ include($root.'/includes/head.php');
                   <h1 class="heading heading-inverse heading-1 strong-400 text-normal">
                     <?php echo $title; ?>
                   </h1>
-                  <p class="heading heading-inverse heading-1 text-normal">
-                    <?php echo '- Writen by ' . $author; ?>
+                  <p class="heading heading-inverse heading-3 text-normal">
+                    <?php echo '-' . $author; ?>
                   </p>
                   <span class="clearfix"></span>
                 </div>
