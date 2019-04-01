@@ -3,7 +3,7 @@
 <?php
     $root = $_SERVER['DOCUMENT_ROOT'];
     $title = "N - Templates - Headers";
-    include($root.'/includes/session.php');
+    // include($root.'/includes/session.php');
     include($root.'/includes/head.php');
 ?>
 <body>
