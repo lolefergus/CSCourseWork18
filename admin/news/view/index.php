@@ -78,7 +78,7 @@ include($root.'/includes/connect.php');
                   <div class="col-12">
                     <div class="form-group has-feedback">
                       <label for="" class="text-uppercase c-gray-light">Body</label>
-                      <input type="textarea" name="body" class="form-control no-resize" rows="5" required="" style="margin-top: 0px; margin-bottom: 0px; height: 200px;">'.$body.'</textarea>
+                      <input type="textarea" name="body" class="form-control no-resize" rows="5" required="" style="margin-top: 0px; margin-bottom: 0px; height: 200px;" value="'.$body.'">
                       <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                       <div class="help-block with-errors"></div>
                     </div>
