@@ -23,8 +23,8 @@ include($root.'/includes/connect.php');
     if (isset($_POST['update'])) //if clicked update
     {
       $id = $_GET['id'];//passes value from HTML input bo
-      $title = $_GET['title'];
-      $body = $_GET['body'];
+      $title = $_POST['title'];
+      $body = $_POST['body'];
       sqlsrv_query($conn, "UPDATE news (title, body) VALUES ($title, $body) WHERE id = $id");
       // echo '<script>window.location.href="/admin/news/index.php";</script>';
     }
