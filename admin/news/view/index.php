@@ -13,14 +13,21 @@ include($root.'/includes/connect.php');
     <?php
     include($root.'/includes/adminnavbar.php');
 
-    if (isset($_POST['delete']))
+    if (isset($_POST['delete'])) //if clicked delete
     {
       $id = $_GET['id'];//passes value from HTML input box
       sqlsrv_query($conn, "DELETE FROM news WHERE id = '$id'");
       echo '<script>window.location.href="/admin/news/index.php";</script>';
     }
 
-
+    if (isset($_POST['update'])) //if clicked update
+    {
+      $id = $_GET['id'];//passes value from HTML input bo
+      $title = $_GET['title'];
+      $body = $_GET['body'];
+      sqlsrv_query($conn, "UPDATE news (title, body) VALUES ($title, $body) WHERE id = $id");
+      echo '<script>window.location.href="/admin/news/index.php";</script>';
+    }
 
     $id = $_GET['id'];
     $Query = sqlsrv_query($conn,"SELECT * FROM news WHERE id = $id");
@@ -80,7 +87,7 @@ include($root.'/includes/connect.php');
                 <div class="row py-3">
                   <div class="col-12">
                     <input type="submit" class="btn btn-styled btn-base-1" name="delete" value="Delete">
-                    <input type="submit" class="btn btn-styled btn-base-1" name="submit" value="Submit">
+                    <input type="submit" class="btn btn-styled btn-base-1" name="update" value="Update">
                   </div>
                 </div>
               </div>
