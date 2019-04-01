@@ -2,7 +2,7 @@
 <html>
 <?php
     $root = $_SERVER['DOCUMENT_ROOT'];
-    $title = "N - Templates - Headers";
+    $title = "Admin";
     // include($root.'/includes/session.php');
     include($root.'/includes/head.php');
 ?>
