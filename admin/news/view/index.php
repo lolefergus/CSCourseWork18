@@ -26,7 +26,7 @@ include($root.'/includes/connect.php');
       $title = $_GET['title'];
       $body = $_GET['body'];
       sqlsrv_query($conn, "UPDATE news (title, body) VALUES ($title, $body) WHERE id = $id");
-      echo '<script>window.location.href="/admin/news/index.php";</script>';
+      // echo '<script>window.location.href="/admin/news/index.php";</script>';
     }
 
     $id = $_GET['id'];
