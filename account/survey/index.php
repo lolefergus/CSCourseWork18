@@ -27,7 +27,8 @@ else {
   $surveyNo = 1;
 }
 
-if ($surveyNo != 4) {
+//if hasn't yet taken 3
+if ($surveyNo < 4) {
   include($root.'/account/survey/questions.php');
 }
 else {
