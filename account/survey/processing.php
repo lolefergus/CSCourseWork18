@@ -23,7 +23,7 @@ if (isset($_POST['SubmitCheck'])) {
     $answer = $_POST['Question'.$qId.'']; //takes answer from post
     $saveAnswer = sqlsrv_query($conn, "INSERT INTO skillSurveyAs (studentId, surveyNo, qId, dateCompleted, answer) values ($userId, $surveyNo, $qId, convert(date, getdate()), $answer)");
   }
-  header("Location:account/");
+  header("Location:/account/");
 }
 else {
 print "An Error Has Occurred, Please Try Again";
