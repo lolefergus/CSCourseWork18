@@ -39,14 +39,26 @@
                 Gallery
               </a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown07">
-                <a class="dropdown-item" href="/account/login/">Login</a>
-                <a class="dropdown-item" href="#">Sign Up</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
+            <<?php
+            if ($_SESSION) {
+              echo'
+              <li class="nav-item">
+                <a class="nav-link" href="/account/index.php">
+                  Account Home
+                </a>
+              </li>
+              ';
+            }
+            else {
+              echo'
+              <li class="nav-item">
+                <a class="nav-link" href="/account/login/index.php">
+                  Login
+                </a>
+              </li>
+              ';
+            }
+            ?>
           </ul>
         </div>
 
