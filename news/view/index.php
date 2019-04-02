@@ -16,6 +16,11 @@ $title = $row['title'];
 //sets up page
 include($root.'/includes/head.php');
 
+print $row['title'];
+print $row['body'];
+print $row['image'];
+print $row['firstName'] . " " . $row['lastName'];
+
 $errors = sqlsrv_errors();
 foreach( $errors as $error ) {
   echo "SQLSTATE: ".$error[ 'SQLSTATE']."<br />";
