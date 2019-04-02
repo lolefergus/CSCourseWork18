@@ -16,10 +16,10 @@ $title = $row['title'];
 //sets up page
 include($root.'/includes/head.php');
 
-print $row['title'];
-print $row['body'];
-print $row['image'];
-print $row['firstName'] . " " . $row['lastName'];
+print "Ttile: " . $row['title'];
+print " Body: " . $row['body'];
+print " Image: " . $row['image'];
+print " Name: " . $row['firstName'] . " " . $row['lastName'];
 
 if ($errors = sqlsrv_errors() == null)
 {
