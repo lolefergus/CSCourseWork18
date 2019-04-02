@@ -3,8 +3,8 @@
 <?php
     $root = $_SERVER['DOCUMENT_ROOT'];
     $title = "Home"; //sets page title
-    include($root.'/includes/connect.php');
     include($root.'/includes/head.php');
+    include($root.'/includes/connect.php');
 ?>
 <body>
 
