@@ -4,7 +4,7 @@ $title = "Login";
 include($root.'/includes/connect.php');
 session_start();
 
-if ($_SESSION['active'] = true)
+if ($_SESSION['active'] == true)
 {
   //if Already signed in
   header('location: /account/');
@@ -20,7 +20,7 @@ if(isset($_POST['email']))
 if(isset($_POST['login']))
 {
 //sets values from info entered on page
-$email = $_POST['email']];
+$email = $_POST['email'];
 $escapedEmail = preg_quote ($email);
 if (print preg_match( "[a-zA-Z0-9_%\+-]+(\.[a-zA-Z0-9_%\+-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z]+)+", $escapedEmail))
 {
@@ -39,7 +39,7 @@ if (print preg_match( "[a-zA-Z0-9_%\+-]+(\.[a-zA-Z0-9_%\+-]+)*@[a-zA-Z0-9-]+(\.[
       $hashed = $row['saltedPassword'];
       $id = $row['id'];
       //Use password_verify to check unhashed password is same as hashed password
-      $password = $_REQUEST[$_POST['password'];
+      $password = $_REQUEST[$_POST['password']];
       if (password_verify($password, $hashed))
       {
         print "Succesful"; //REMOVE
