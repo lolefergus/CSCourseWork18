@@ -16,7 +16,7 @@ $title = $row['title'];
 //sets up page
 include($root.'/includes/head.php');
 
-$errors = sqlsrv_errors()
+$errors = sqlsrv_errors();
 foreach( $errors as $error ) {
   echo "SQLSTATE: ".$error[ 'SQLSTATE']."<br />";
   echo "code: ".$error[ 'code']."<br />";
