@@ -40,7 +40,7 @@
               </a>
             </li>
             <<?php
-            if ($_SESSION) {
+            if (session_status  == PHP_SESSION_NONE) {
               echo'
               <li class="nav-item">
                 <a class="nav-link" href="/account/index.php">
