@@ -21,11 +21,16 @@ print $row['body'];
 print $row['image'];
 print $row['firstName'] . " " . $row['lastName'];
 
-$errors = sqlsrv_errors();
-foreach( $errors as $error ) {
-  echo "SQLSTATE: ".$error[ 'SQLSTATE']."<br />";
-  echo "code: ".$error[ 'code']."<br />";
-  echo "message: ".$error[ 'message']."<br />";
+if ($errors = sqlsrv_errors() = null)
+{
+  print "No Error in SQL?";
+}
+else {
+  foreach( $errors as $error ) {
+    echo "SQLSTATE: ".$error[ 'SQLSTATE']."<br />";
+    echo "code: ".$error[ 'code']."<br />";
+    echo "message: ".$error[ 'message']."<br />";
+  }
 }
 
 ?>
