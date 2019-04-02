@@ -16,6 +16,7 @@ $title = $row['title'];
 //sets up page
 include($root.'/includes/head.php');
 
+print sqlsrv_errors();
 ?>
 <body>
 
