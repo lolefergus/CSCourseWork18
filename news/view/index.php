@@ -21,7 +21,7 @@ print $row['body'];
 print $row['image'];
 print $row['firstName'] . " " . $row['lastName'];
 
-if ($errors = sqlsrv_errors() = null)
+if ($errors = sqlsrv_errors() == null)
 {
   print "No Error in SQL?";
 }
