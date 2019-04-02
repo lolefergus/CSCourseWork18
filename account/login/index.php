@@ -39,7 +39,7 @@ if (print preg_match( "[a-zA-Z0-9_%\+-]+(\.[a-zA-Z0-9_%\+-]+)*@[a-zA-Z0-9-]+(\.[
       $hashed = $row['saltedPassword'];
       $id = $row['id'];
       //Use password_verify to check unhashed password is same as hashed password
-      $password = $_REQUEST[$_POST['password']];
+      $password = $_REQUEST[$_POST['password'];
       if (password_verify($password, $hashed))
       {
         print "Succesful"; //REMOVE
@@ -49,7 +49,7 @@ if (print preg_match( "[a-zA-Z0-9_%\+-]+(\.[a-zA-Z0-9_%\+-]+)*@[a-zA-Z0-9-]+(\.[
           print "Session started";
           //Use user's id to identify the session
           $_SESSION['id']= $id;
-          $_SESSION['active'] = true;
+          $_SESSION['active'] == true;
           $_SESSION['last_activity'] = time(); //your last activity was now, having logged in.
           //sends user to account homepage
           // header('location: /account/'); UNCOMENT AFTER DEBUGGING
