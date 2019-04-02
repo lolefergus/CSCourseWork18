@@ -40,8 +40,8 @@
               </a>
             </li>
             <?php
-            session_start;
-            if (session_status  == PHP_SESSION_NONE) {
+            session_start();
+            if (session_status()  == PHP_SESSION_NONE) {
               echo'
               <li class="nav-item">
                 <a class="nav-link" href="/account/index.php">
