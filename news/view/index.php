@@ -16,22 +16,6 @@ $title = $row['title'];
 //sets up page
 include($root.'/includes/head.php');
 
-print "Ttile: " . $row['title'];
-print " Body: " . $row['body'];
-print " Image: " . $row['image'];
-print " Name: " . $row['firstName'] . " " . $row['lastName'];
-
-if ($errors = sqlsrv_errors() == null)
-{
-  print "No Error in SQL?";
-}
-else {
-  foreach( $errors as $error ) {
-    echo "SQLSTATE: ".$error[ 'SQLSTATE']."<br />";
-    echo "code: ".$error[ 'code']."<br />";
-    echo "message: ".$error[ 'message']."<br />";
-  }
-}
 
 ?>
 <body>
