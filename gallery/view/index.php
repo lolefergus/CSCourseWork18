@@ -47,7 +47,7 @@ include($root.'/includes/head.php');
         <div class="masonry-item col-sm-12 design justify-content-center" style="position: relative; height=span">
             <div class="block block--style-5 mb-0">
               <div class="block-image">
-                <img src="<?php echo '/images/'.$image; ?>" class="mx-auto d-block">
+                <img src="<?php echo '/images/'.$image; ?>" class="mx-auto d-block" style="width:75%;height:75%">
               </div>
             </div>
         </div>
