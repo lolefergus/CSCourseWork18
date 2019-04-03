@@ -35,7 +35,7 @@
                     <td scope="row">Do I - ' . $question . '?</td>
                     <td scope="row" hidden>'. $qid . '</td>
                     <td scope="row">
-                      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                      <div class="btn-group btn-group-toggle" required data-toggle="buttons">
                         <label class="btn btn-success">
                           <input type="radio" name="Question'.$qid.'" value="1" autocomplete="off"> Usually
                         </label>
