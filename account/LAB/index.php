@@ -111,6 +111,7 @@ include($root.'/includes/connect.php');
       ?>
 
       <?php
+      $yearsActive = sqlsrv_query($conn, "SELECT DISTINCT joinYear FROM accounts WHERE accountType = 'Student'");
       while ($currentYear = sqlsrv_fetch_array($yearsActive)) //loops for each section
       {
         print '<div id="' . $studentGroup . 'SurveyProgress" style="width: 900px; height: 500px;"></div>';
