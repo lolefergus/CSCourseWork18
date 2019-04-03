@@ -53,22 +53,48 @@ include($root.'/includes/connect.php');
     google.charts.load('current', {'packages':['corechart']});
     google.charts.setOnLoadCallback(drawChart);
 
-    function drawChart() {
+    // finding info for chart
+    <?php
+    //finds years in system, so as to generate chart for each year
+    $yearsActive = sqlsrv_query($conn, "SELECT DISTINCT joinYear FROM accounts WHERE accountType = 'Student'");
+    while ($currentYear = sqlsrv_fetch_array($yearsActive)) //loops for each section
+    {
+      $studentGroup = $currentYear['joinYear']; //extracts year for current loop
 
-      var data = google.visualization.arrayToDataTable([
-        ['Task', 'Hours per Day'],
-        ['Work',     11],
-        ['Eat',      2],
-        ['Commute',  2],
-        ['Watch TV', 2],
-        ['Sleep',    7]
-      ]);
+      //counts number of distinct students that have completed their 3rd survey
+      $Query = sqlsrv_query($conn, "SELECT DISTINCT skillSurveyAs.studentId FROM skillSurveyAs INNER JOIN accounts ON skillSurveyAs.studentId WHERE skillSurveyAs.surveyNo = 3 AND accounts.joinYear = $studentGroup", array(), array( "Scrollable" => SQLSRV_CURSOR_KEYSET ));
+      $num3 = sqlsrv_num_rows($Query);
+
+      //counts number of distinct students that have completed their 3rd survey
+      $Query = sqlsrv_query($conn, "SELECT DISTINCT skillSurveyAs.studentId FROM skillSurveyAs INNER JOIN accounts ON skillSurveyAs.studentId WHERE skillSurveyAs.surveyNo = 2 AND accounts.joinYear = $studentGroup", array(), array( "Scrollable" => SQLSRV_CURSOR_KEYSET ));
+      $num2 = sqlsrv_num_rows($Query) - $num3; //takes of num of students finished 3rd survey to get students that haven't done 3rd
+
+      //counts num students that only completed one survey
+      $Query = sqlsrv_query($conn, "SELECT DISTINCT skillSurveyAs.studentId FROM skillSurveyAs INNER JOIN accounts ON skillSurveyAs.studentId WHERE skillSurveyAs.surveyNo = 1 AND accounts.joinYear = $studentGroup", array(), array( "Scrollable" => SQLSRV_CURSOR_KEYSET ));
+      $num1 = sqlsrv_num_rows($Query) - $num2 - $num3; //calculates number that havn't taken 2nd or 3rd survey
+
+      //counts total num students in year group
+      $Query = sqlsrv_query($conn, "SELECT DISTINCT id FROM accounts WHERE joinYear = $studentGroup AND accountType = 'Student'", array(), array( "Scrollable" => SQLSRV_CURSOR_KEYSET ));
+      $num0 = sqlsrv_num_rows($Query) - $num2 - $num3 - $num1; //finds num haven't completed any surveys
+
+    ?>
+      // integrates with google charts to set out pie chart
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Surveys Completed', 'Number of Students'],
+          ['0', <?php print $num0; ?>],
+          ['1',  <?php print $num1; ?>],
+          ['2',  <?php print $num2; ?>],
+          ['3',  <?php print $num3; ?>]
+
+        ]);
 
       var options = {
-        title: 'Survey Progress'
+        title: 'Survey Progress for <?php print $studentGroup; ?> Students'
       };
 
-      var chart = new google.visualization.PieChart(document.getElementById('completedSurevyOne'));
+      var chart = new google.visualization.PieChart(document.getElementById('<?php print $studentGroup; ?> SuveyProgress')); //survey title
 
       chart.draw(data, options);
     }
