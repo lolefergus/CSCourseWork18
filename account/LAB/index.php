@@ -94,7 +94,7 @@ include($root.'/includes/connect.php');
           title: 'Survey Progress for <?php print $studentGroup; ?> Students'
         };
 
-        var chart = new google.visualization.PieChart(document.getElementById('<?php print $studentGroup; ?> SuveyProgress')); //survey title
+        var chart = new google.visualization.PieChart(document.getElementById('<?php print $studentGroup; ?>SurveyProgress')); //survey title
 
         chart.draw(data, options);
       }
@@ -110,7 +110,13 @@ include($root.'/includes/connect.php');
       include($root.'/includes/navbar.php');
       ?>
 
-      <div id="completedSurevyOne" style="width: 900px; height: 500px;"></div>
+      <?php
+      while ($currentYear = sqlsrv_fetch_array($yearsActive)) //loops for each section
+      {
+        print '<div id="' . $studentGroup . 'SurveyProgress" style="width: 900px; height: 500px;"></div>''
+      }
+     ?>
+
 
       <?php
       include($root.'/includes/footer.php');
