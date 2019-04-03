@@ -113,7 +113,7 @@ include($root.'/includes/connect.php');
       <?php
       while ($currentYear = sqlsrv_fetch_array($yearsActive)) //loops for each section
       {
-        print '<div id="' . $studentGroup . 'SurveyProgress" style="width: 900px; height: 500px;"></div>''
+        print '<div id="' . $studentGroup . 'SurveyProgress" style="width: 900px; height: 500px;"></div>';
       }
      ?>
 
