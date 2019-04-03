@@ -1,16 +1,9 @@
-<?php include($root.'/includes/session.php'); ?>
-<!DOCTYPE html>
-<html>
 <?php
-    $root = $_SERVER['DOCUMENT_ROOT'];
-    $title = "Skill Survey"; //sets page title
-    include($root.'/includes/head.php');
-    include($root.'/includes/connect.php');
+include($root.'/includes/session.php');
+include($root.'/includes/connect.php');
 
-    $userId = 1;
-?>
+$userId = 1; //NEEDAS CHANGING TO USE SEESION
 
-<?php
 //checks survey has been submited
 if (isset($_POST['SubmitCheck'])) {
   $surveyNo = $_POST['surveyNo']; //sets survey number
