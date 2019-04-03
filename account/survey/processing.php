@@ -2,7 +2,7 @@
 include($root.'/includes/session.php');
 include($root.'/includes/connect.php');
 
-$userId = 12; //NEEDAS CHANGING TO USE SEESION
+$userId = 13; //NEEDAS CHANGING TO USE SEESION
 
 //checks survey has been submited
 if (isset($_POST['SubmitCheck'])) {
