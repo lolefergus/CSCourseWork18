@@ -16,6 +16,7 @@ if (isset($_POST['SubmitCheck']))
     $qId = $row['qid']; //takes question ID from SQL query
     $answer = $_POST['Question'.$qId.'']; //takes answer from post
     $saveAnswer = sqlsrv_query($conn, "INSERT INTO skillSurveyAs (studentId, surveyNo, qId, dateCompleted, answer) values ($userId, $surveyNo, $qId, convert(date, getdate()), $answer)");
+    print "user id: " . $iserId . " QID: " $qId . " Answer: ". $answer;
   }
   // header("Location:/account/");
 }
