@@ -65,7 +65,7 @@ include($root.'/includes/connect.php');
       ]);
 
       var options = {
-        title: 'My Daily Activities'
+        title: 'Survey Progress'
       };
 
       var chart = new google.visualization.PieChart(document.getElementById('completedSurevyOne'));
