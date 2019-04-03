@@ -25,4 +25,3 @@ print "An Error Has Occurred, Please Try Again";
 }
 
 ?>
-<!DOCTYPE html>
