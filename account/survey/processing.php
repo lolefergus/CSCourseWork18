@@ -2,7 +2,11 @@
 include($root.'/includes/session.php');
 include($root.'/includes/connect.php');
 
+<<<<<<< HEAD
 $userId = 15; //NEEDAS CHANGING TO USE SEESION
+=======
+$userId = 1; //NEEDAS CHANGING TO USE SEESION
+>>>>>>> parent of 5fd175f... chnaged id
 
 //checks survey has been submited
 if (isset($_POST['SubmitCheck']))
