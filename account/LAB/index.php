@@ -90,14 +90,17 @@ include($root.'/includes/connect.php');
 
         ]);
 
-      var options = {
-        title: 'Survey Progress for <?php print $studentGroup; ?> Students'
-      };
+        var options = {
+          title: 'Survey Progress for <?php print $studentGroup; ?> Students'
+        };
 
-      var chart = new google.visualization.PieChart(document.getElementById('<?php print $studentGroup; ?> SuveyProgress')); //survey title
+        var chart = new google.visualization.PieChart(document.getElementById('<?php print $studentGroup; ?> SuveyProgress')); //survey title
 
-      chart.draw(data, options);
+        chart.draw(data, options);
+      }
+    <?php
     }
+    ?>
     </script>
 
 </head>
