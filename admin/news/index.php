@@ -95,6 +95,13 @@
               </div>
             </div>
 
+            <div class="row py-3">
+              <div class="col-12">
+                <button onclick="window.location.href = '/admin/news/create/index.php';" class="btn btn-styled btn-base-1">Create New Article</button>
+                <input type="link" action="" class="btn btn-styled btn-base-1" name="new" value="Create New Article">
+              </div>
+            </div>
+
           </section>
 
          <?php
