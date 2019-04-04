@@ -9,7 +9,7 @@ $title = $row['title'];
 
 $isRows = sqlsrv_has_rows($Query);
 
-if ($isRows === false)
+if ($isRows !=== true)
 {
   header('Location: /news/index.php');
 }
