@@ -2,6 +2,7 @@
 <?php $root = $_SERVER['DOCUMENT_ROOT'];
 $title = "Account Home"; //sets page title
 include($root.'/includes/seesion.php');
+include($root.'/inlcudes/connect.php');
 ?>
 <!DOCTYPE html>
 <html>
