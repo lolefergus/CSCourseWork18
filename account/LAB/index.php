@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php //session_start(); ?>
 <?php $root = $_SERVER['DOCUMENT_ROOT'];
 $title = "Account Home"; //sets page title
 include($root.'/includes/connect.php');
