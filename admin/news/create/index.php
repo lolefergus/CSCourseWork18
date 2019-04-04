@@ -3,7 +3,7 @@
 <?php
 $root = $_SERVER['DOCUMENT_ROOT'];
 $title = "New Article";
-// include($root.'/includes/session.php');
+include($root.'/includes/session.php');
 include($root.'/includes/head.php');
 include($root.'/includes/connect.php');
 ?>
