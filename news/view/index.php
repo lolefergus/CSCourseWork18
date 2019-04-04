@@ -1,20 +1,4 @@
-<?php
-session_start();
-
-//sources title and news article
-$id = $_GET['id'];
-$Query = sqlsrv_query($conn,"SELECT news.title, news.body, news.image, accounts.firstName, accounts.lastName FROM news INNER JOIN accounts ON news.authorId = accounts.id WHERE news.id = $id", array(), array( "Scrollable" => SQLSRV_CURSOR_KEYSET ));
-$row = sqlsrv_fetch_array($Query);
-$title = $row['title'];
-
-$numRows = sqlsrv_num_rows($Query);
-
-if ($numRows == 1)
-{
-  header('Location: /news/index.php');
-}
-?>
-
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <?php
@@ -23,10 +7,14 @@ $root = $_SERVER['DOCUMENT_ROOT'];
 //conects to Database
 include($root.'/includes/connect.php');
 
+//sources title and news article
+$id = $_GET['id'];
+$Query = sqlsrv_query($conn,"SELECT news.title, news.body, news.image, accounts.firstName, accounts.lastName FROM news INNER JOIN accounts ON news.authorId = accounts.id WHERE news.id = $id");
+$row = sqlsrv_fetch_array($Query);
+$title = $row['title'];
 
 //sets up page
 include($root.'/includes/head.php');
-
 
 ?>
 <body>
