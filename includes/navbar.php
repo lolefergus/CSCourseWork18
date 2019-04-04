@@ -40,15 +40,17 @@
               </a>
             </li>
             <?php
-            if ($_SESSION['active'] == true) {
+            if (isset($_SESSION['active']) &&$_SESSION['active'] == true)
+            {
               echo'
-              <li class="nav-item">
-                <a class="nav-link" href="/account/index.php">
-                  Account Home
-                </a>
-              </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/account/index.php">
+                    Account Home
+                  </a>
+                </li>
               ';
             }
+
             else {
               echo'
               <li class="nav-item">
