@@ -74,7 +74,7 @@ include($root.'/includes/connect.php');
       $num1 = sqlsrv_num_rows($Query) - $num2 - $num3; //calculates number that havn't taken 2nd or 3rd survey
 
       //counts total num students in year group
-      $Query = sqlsrv_query($conn, "SELECT DISTINCT id FROM accounts WHERE joinYear = $studentGroup AND accountType = 'Student'", array(), array( "Scrollable" => SQLSRV_CURSOR_KEYSET ));
+      $Query = sqlsrv_query($conn, "SELECT DISTINCT id FROM accounts WHERE joinYear = $studentGroup array(), array( "Scrollable" => SQLSRV_CURSOR_KEYSET ));
       $num0 = sqlsrv_num_rows($Query) - $num2 - $num3 - $num1; //finds num haven't completed any surveys
 
     ?>
