@@ -18,7 +18,7 @@ include($root.'/includes/connect.php');
       $title = $_POST['title'];
       $body = $_POST['body'];
       $image = $_POST['image'];
-      sqlsrv_query($conn, "INSERT INTO news (title, body, image) VALUES ($title, $body, $image)");
+      sqlsrv_query($conn, "INSERT INTO news (title, body, image) VALUES ('$title', '$body', '$image')");
       echo '<script>window.location.href="/admin/news/index.php";</script>';
     }
 
@@ -92,7 +92,7 @@ include($root.'/includes/connect.php');
         </div>
       </section>
       ';
-    
+
 
 
     include($root.'/includes/footer.php');
