@@ -11,7 +11,7 @@ $isRows = sqlsrv_has_rows($Query);
 
 if ($isRows === false)
 {
-  header('/news/index.php');
+  header('Location: /news/index.php');
 }
 ?>
 
