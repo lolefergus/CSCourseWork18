@@ -1,4 +1,20 @@
-<?php session_start(); ?>
+<?php
+session_start();
+
+//sources title and news article
+$id = $_GET['id'];
+$Query = sqlsrv_query($conn,"SELECT news.title, news.body, news.image, accounts.firstName, accounts.lastName FROM news INNER JOIN accounts ON news.authorId = accounts.id WHERE news.id = $id");
+$row = sqlsrv_fetch_array($Query);
+$title = $row['title'];
+
+$isRows = sqlsrv_has_rows($Query);
+
+if ($isRows === false)
+{
+  header('/news/index.php');
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <?php
@@ -7,11 +23,6 @@ $root = $_SERVER['DOCUMENT_ROOT'];
 //conects to Database
 include($root.'/includes/connect.php');
 
-//sources title and news article
-$id = $_GET['id'];
-$Query = sqlsrv_query($conn,"SELECT news.title, news.body, news.image, accounts.firstName, accounts.lastName FROM news INNER JOIN accounts ON news.authorId = accounts.id WHERE news.id = $id");
-$row = sqlsrv_fetch_array($Query);
-$title = $row['title'];
 
 //sets up page
 include($root.'/includes/head.php');
