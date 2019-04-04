@@ -22,8 +22,7 @@ include($root.'/includes/connect.php');
       echo '<script>window.location.href="/admin/news/index.php";</script>';
     }
 
-    while ($row = sqlsrv_fetch_array($Query))
-    {
+
       ?>
 
       <!-- PAGE HEADER -->
@@ -93,7 +92,7 @@ include($root.'/includes/connect.php');
         </div>
       </section>
       ';
-    };
+    
 
 
     include($root.'/includes/footer.php');
