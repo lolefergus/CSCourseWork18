@@ -8,7 +8,7 @@ $Query = sqlsrv_query($conn,"SELECT news.title, news.body, news.image, accounts.
 $isRows = sqlsrv_has_rows($Query);
 
 if ($Query) {
-  if ($isRows === true)
+  if ($isRows !=== true)
   {
     $row = sqlsrv_fetch_array($Query);
     $title = $row['title'];
