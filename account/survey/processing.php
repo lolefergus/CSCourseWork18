@@ -1,12 +1,9 @@
 <?php include($root.'/includes/session.php'); ?>
-<!DOCTYPE html>
-<html>
+
 <?php
     $root = $_SERVER['DOCUMENT_ROOT'];
     $title = "Skill Survey"; //sets page title
-    include($root.'/includes/head.php');
     include($root.'/includes/connect.php');
-    include($root.'/includes/navbar.php');
 
     $userId = 1;
 //checks survey has been submited
@@ -27,3 +24,6 @@ print "An Error Has Occurred, Please Try Again";
 }
 
 ?>
+
+<!DOCTYPE html>
+<html>
